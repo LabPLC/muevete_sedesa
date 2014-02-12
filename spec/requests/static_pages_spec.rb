@@ -15,15 +15,16 @@ describe "Static Pages" do
       visit '/static_pages/index'
       expect(page).to have_content('Iniciar sesión')
     end
-    
+
     it "should have the content 'Información'" do
       visit '/static_pages/index'
       expect(page).to have_content('Información')
     end
     
+
     it "should have the title 'Inicio'" do
       visit '/static_pages/index'
-      expect(page).to have_title('Inicio')
+      expect(page).to have_title("Inicio")
     end
     
   end
@@ -36,7 +37,7 @@ describe "Static Pages" do
     
     it "should have the title 'Ayuda'" do
       visit '/static_pages/ayuda'
-      expect(page).to have_title("#{base_title} | Ayuda")
+      expect(page).to have_title("Ayuda")
     end
   end
   
@@ -48,7 +49,7 @@ describe "Static Pages" do
     
     it "shoud have the title 'Información'" do
       visit '/static_pages/info'
-      expect(page).to have_title('Información')
+      expect(page).to have_title("Información")
     end
   end
 end
