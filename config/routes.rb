@@ -1,4 +1,6 @@
 SedesaApp::Application.routes.draw do
+  get "users", to: 'users#show'
+  get "perfil/:id", to: 'users#index'
   devise_for :users
   #get "static_pages/index"
   get "static_pages/ayuda"
