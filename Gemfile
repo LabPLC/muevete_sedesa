@@ -15,6 +15,7 @@ group :development, :test do
 end
 
 gem 'haml'
+gem 'devise'
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
