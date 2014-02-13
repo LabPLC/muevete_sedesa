@@ -1,4 +1,5 @@
 SedesaApp::Application.routes.draw do
+  devise_for :users
   #get "static_pages/index"
   get "static_pages/ayuda"
   get "static_pages/info"
