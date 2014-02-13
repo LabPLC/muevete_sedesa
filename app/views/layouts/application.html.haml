@@ -14,10 +14,12 @@
 
   = render 'layouts/header'
 
-  %p.notice
-    = notice
-  %p.alert
-   = alert
+  -if notice
+    %p.notice
+      = notice
+  -if alert
+    %p.alert
+      = alert
 
   = yield
 
