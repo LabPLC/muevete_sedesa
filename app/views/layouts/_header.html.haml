@@ -12,7 +12,15 @@
               %li.current_page_item
                 %a{ href: '#'} Bienvenido
               %li
-                %a{ href: '#'} Iniciar sesión
+                - if user_signed_in?
+                  %a{ href: '#'}
+                    = current_user.email
+                - else
+                  = link_to 'Iniciar sesión', new_user_session_path
+              - if user_signed_in?
+                %li
+                  = link_to 'Salir', destroy_user_session_path, method: 'delete'
+                
               %li
                 %a{ href: '#'} Ayuda
               
