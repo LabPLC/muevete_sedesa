@@ -1,2 +1,24 @@
-%h1 Users#show
-%p Find me in app/views/users/show.html.haml
+- provide(:title, "Perfil")
+
+#banner-wrapper
+  .container
+    .row
+      .12u
+        #banner.box
+          %div
+            .row
+              .7u
+                %h2 
+                  Hola
+                  = @user.email
+                %p 
+                  Administra tu perfil
+              .5u
+                %ul
+                  %li
+                    %a.button.big.fa.fa-arrow-circle-right{ href: '#'}20 puntos
+                  %li
+                    %a.button.alt.big.fa.fa-question-circle{ href: '#'} Premios
+                  %li
+                    %a.button.big.fa.fa-calendar{ href: '#'}
+                      Actividades
