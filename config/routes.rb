@@ -1,6 +1,7 @@
 SedesaApp::Application.routes.draw do
   get "/perfil/:id", to: 'users#show'
   get "/users", to: 'users#index'
+  get "/userhome", to: 'users#home', as: 'user_home'
   devise_for :users
   #get "static_pages/index"
   get "static_pages/ayuda"
