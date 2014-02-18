@@ -17,5 +17,4 @@
 //= require config
 //= require skel.min
 //= require skel-panels.min
-//= require turbolinks
 //= require_tree .
