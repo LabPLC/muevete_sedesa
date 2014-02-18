@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218224741) do
+ActiveRecord::Schema.define(version: 20140218224927) do
 
   create_table "actions", force: true do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140218224741) do
     t.string   "points"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "level",      default: 1
   end
 
   create_table "posts", force: true do |t|
