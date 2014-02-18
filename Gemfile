@@ -13,6 +13,7 @@ group :development, :test do
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.9'
   gem 'holder_rails'
+  gem 'faker'
 end
 
 gem 'haml'
