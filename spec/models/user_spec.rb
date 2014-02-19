@@ -23,6 +23,8 @@ describe User do
   it { should respond_to(:completed_actions) }
   it { should respond_to(:todo_actions)}
 
+  it { should respond_to(:complete_action!)}
+
   describe "seguir accion" do
     let(:accion) { FactoryGirl.create(:action) }
     before do
@@ -32,6 +34,19 @@ describe User do
 
     it { should be_doing_action(accion)}
     its(:followed_actions) { should include(accion)}
+  end
+
+  describe "completar accion" do
+    let(:accion) { FactoryGirl.create(:action)}
+    before do
+      @user.save!
+      @user.do_action!(accion)
+      @user.complete_action!(accion)
+    end
+    its(:followed_actions) { should include(accion)}
+    its(:completed_actions) { should include(accion)}
+    its(:todo_actions) { should_not include(accion)}
+    
   end
 
 end
