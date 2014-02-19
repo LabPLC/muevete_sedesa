@@ -4,6 +4,13 @@ namespace :db do
   desc "Llenar base de datos con ejemplo"
   task :populate => :environment do
     Rake::Task['db:reset'].invoke
+    make_users
+    make_actions
+    make_user_actions
+    
+  end
+
+  def make_users
     User.create!(first_name: "Juan Carlos",
                  last_name: "Sanchez",
                  email: "jjuanchow@gmail.com",
@@ -20,7 +27,9 @@ namespace :db do
                    password: password, 
                    password_confirmation: password)
     end
+  end
 
+  def make_actions
     Action.create!(name: "Accion Saludable 1", desc: "Esta es una accion saludable que puedes checar blablablab", points: 20, level: 1)
     30.times do |n|
       name = Faker::Lorem.sentence(1)
@@ -43,7 +52,15 @@ namespace :db do
                      points: points,
                      level: level,
                      canjeable: canj)
-
     end
   end
+
+  def make_user_actions
+    users = User.all
+    user = users.first
+    acciones = Action.all.sample(3)
+    acciones.each { | accion | user.do_action!(accion)}
+  end
+
+
 end
