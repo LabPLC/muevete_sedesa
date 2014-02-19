@@ -15,4 +15,12 @@ class User < ActiveRecord::Base
     relationships.create!(action_id: accion.id)
   end
 
+  def completed_actions
+    relationships.find_all_by_completed(true)
+  end
+
+  def todo_actions
+    relationships.find_all_by_completed(false)
+  end
+
 end
