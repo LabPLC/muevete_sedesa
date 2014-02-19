@@ -1,4 +1,5 @@
 SedesaApp::Application.routes.draw do
+  get "acciones/:id", to: 'actions#show', as: 'accion'
   get "/perfil/:id", to: 'users#show'
   get "/users", to: 'users#index'
   get "/userhome", to: 'users#home', as: 'user_home'

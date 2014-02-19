@@ -1,0 +1,2 @@
+module ActionsControllerHelper
+end

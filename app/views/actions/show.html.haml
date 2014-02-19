@@ -1,0 +1,28 @@
+#main-wrapper
+  .container
+    .row
+      .8u.skel-cell-important
+        #content
+          %article.last
+            %h2
+              = @action.name
+            %p
+              Aquí va un resumen de esta accion saludable
+            %h3
+              Descripción
+            %p
+              = @action.desc
+      .4u
+        #sidebar
+          - if @action.canjeable
+            %section
+              %h3
+                Canjea tu código aquí
+              %input{type: "text", required: true}
+          - else
+            %section
+              %h3
+                Mayor información
+
+=debug(@action) if Rails.env.development?
+              
