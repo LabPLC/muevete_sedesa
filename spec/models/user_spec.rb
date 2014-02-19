@@ -20,6 +20,9 @@ describe User do
   it { should respond_to(:doing_action?)}
   it { should respond_to(:do_action! )}
 
+  it { should respond_to(:completed_actions) }
+  it { should respond_to(:todo_actions)}
+
   describe "seguir accion" do
     let(:accion) { FactoryGirl.create(:action) }
     before do
