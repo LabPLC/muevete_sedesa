@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140219190306) do
+ActiveRecord::Schema.define(version: 20140219225141) do
 
   create_table "actions", force: true do |t|
     t.string   "name"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140219190306) do
     t.integer  "action_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "completed",  default: false
   end
 
   add_index "relationships", ["action_id"], name: "index_relationships_on_action_id"
