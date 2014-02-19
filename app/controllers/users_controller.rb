@@ -9,6 +9,8 @@ class UsersController < ApplicationController
   end
 
   def home
+    # @acciones = Action.all
+    @acciones = Action.all.sample(3)
   end
 
   private

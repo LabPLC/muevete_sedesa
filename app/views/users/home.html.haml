@@ -28,34 +28,9 @@
 #features-wrapper
   .container
     .row
-      .4u
-        %section.box.box-feature
-          %a.image.image-full{ href: '#'}
-            = holder_tag '300x200/social'
-          .inner
-            %header
-              %h2
-                Soy un badge
-              %span
-                Comparte con tus amigos
-            %p
-              Hice algo saludable y 
-              = current_user.first_name
-              me ganó
-      .4u
-        %section.box.box-feature
-          %a.image.image-full{ href: '#'}
-            = holder_tag '300x200/lava'
-          .inner
-            %header
-              %h2
-                Soy otro badge
-              %span
-                Comparte con tus amigos
-            %p
-              Hice algo mas saludable y 
-              = current_user.first_name
-              me ganó
+      - @acciones.each do |accion|
+        .4u
+          = render partial: "shared/action_show", locals: {accion: accion}
 
 .features-wrapper
   .container
