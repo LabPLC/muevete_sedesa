@@ -33,12 +33,17 @@ namespace :db do
         level = 3
       else 
         level = 1
+      end
+      canj = true
+      if n > 20
+        canj = false
       end 
       Action.create!(name: name,
                      desc: desc,
                      points: points,
-                     level: level)
-      
+                     level: level,
+                     canjeable: canj)
+
     end
   end
 end
