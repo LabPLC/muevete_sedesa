@@ -7,23 +7,23 @@ describe "Static Pages" do
   describe "pagina de inicio" do
     
     it "should have the content '¡Muévete!'" do
-      visit '/static_pages/index'
+      visit '/'
       expect(page).to have_content('¡Muévete!')
     end
     
     it "should have the content 'Iniciar sesión'" do
-      visit '/static_pages/index'
+      visit '/'
       expect(page).to have_content('Iniciar sesión')
     end
 
     it "should have the content 'Información'" do
-      visit '/static_pages/index'
+      visit '/'
       expect(page).to have_content('Información')
     end
     
 
     it "should have the title 'Inicio'" do
-      visit '/static_pages/index'
+      visit '/'
       expect(page).to have_title("Inicio")
     end
     
