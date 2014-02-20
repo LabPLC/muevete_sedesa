@@ -42,6 +42,7 @@ namespace :db do
         level = 1
       end
       canj = true
+      code = "AAAA-12345"
       if n > 20
         canj = false
       end 
@@ -49,7 +50,8 @@ namespace :db do
                      desc: desc,
                      points: points,
                      level: level,
-                     canjeable: canj)
+                     canjeable: canj,
+                     code: code)
     end
   end
 
