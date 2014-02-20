@@ -23,4 +23,12 @@ class User < ActiveRecord::Base
     relationships.find_all_by_completed(false)
   end
 
+  def complete_action!(accion)
+    if !doing_action?(accion).nil?
+      completada = relationships.find(accion)
+      completada.completed = true
+      completada.save
+    end
+  end
+
 end

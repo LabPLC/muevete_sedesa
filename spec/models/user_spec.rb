@@ -38,15 +38,22 @@ describe User do
 
   describe "completar accion" do
     let(:accion) { FactoryGirl.create(:action)}
+    
     before do
       @user.save!
       @user.do_action!(accion)
       @user.complete_action!(accion)
+
     end
+
     its(:followed_actions) { should include(accion)}
-    its(:completed_actions) { should include(accion)}
     its(:todo_actions) { should_not include(accion)}
-    
+
+    describe "agregar puntos" do
+
+      its(:points) {should eq(@user.points+accion.points)}
+    end
+
   end
 
 end
