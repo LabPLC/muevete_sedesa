@@ -41,6 +41,7 @@ describe User do
     
     before do
       @user.save!
+      @puntos = @user.points
       @user.do_action!(accion)
       @user.complete_action!(accion)
 
@@ -51,7 +52,7 @@ describe User do
 
     describe "agregar puntos" do
 
-      its(:points) {should eq(@user.points+accion.points)}
+      its(:points) {should eq(@puntos+accion.points)}
     end
 
   end

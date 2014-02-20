@@ -28,7 +28,14 @@ class User < ActiveRecord::Base
       completada = relationships.find(accion)
       completada.completed = true
       completada.save
+
+      add_points(accion)
     end
+  end
+
+  def add_points(accion)
+    self.points += accion.points
+    self.save
   end
 
 end
