@@ -13,12 +13,12 @@ group :development, :test do
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.9'
   gem 'holder_rails'
-  gem 'faker', :require =>false
   gem "quiet_assets", "~> 1.0.2"
 end
 
 gem 'haml'
 gem 'devise'
+gem 'faker'
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
