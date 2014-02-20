@@ -1,8 +1,7 @@
-
-
 namespace :db do
   desc "Llenar base de datos con ejemplo"
   task :populate => :environment do
+    require 'faker'
     make_users
     make_actions
     make_user_actions
