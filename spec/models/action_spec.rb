@@ -44,19 +44,24 @@ describe Action do
   end
 
   describe "codigos" do
+    before do
+      @action.code = "aaa"
+    end
 
     describe "cuando no es canjeable" do
       before do
         @action.canjeable = false
+        @action.save
       end
-      its(:code) { should be_empty }
+      its(:code) { should be_nil }
     end
 
     describe "cuando si es canjeable" do
       before do
         @action.canjeable = true
+        @action.save
       end
-      its(:code) { should_not be_empty}
+      its(:code) { should_not be_nil}
     end
   end
 
