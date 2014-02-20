@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140220171240) do
+ActiveRecord::Schema.define(version: 20140220235540) do
 
   create_table "actions", force: true do |t|
     t.string   "name"
     t.string   "desc"
-    t.string   "points"
+    t.integer  "points",     limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "level",      default: 1
-    t.boolean  "canjeable",  default: false
+    t.integer  "level",                  default: 1
+    t.boolean  "canjeable",              default: false
     t.string   "code"
   end
 
