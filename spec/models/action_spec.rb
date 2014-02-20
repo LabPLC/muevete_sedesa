@@ -16,7 +16,9 @@ describe Action do
   it { should respond_to(:relationships)}
 
   
-  it { should respond_to(:users)}
+  it { should respond_to(:users) }
+
+  it { should respond_to(:code) }
 
 
 
@@ -39,6 +41,23 @@ describe Action do
 
     subject { @action }
     its(:users) { should include(user)}
+  end
+
+  describe "codigos" do
+
+    describe "cuando no es canjeable" do
+      before do
+        @action.canjeable = false
+      end
+      its(:code) { should be_empty }
+    end
+
+    describe "cuando si es canjeable" do
+      before do
+        @action.canjeable = true
+      end
+      its(:code) { should_not be_empty}
+    end
   end
 
 end
