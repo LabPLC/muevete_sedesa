@@ -3,7 +3,6 @@
 namespace :db do
   desc "Llenar base de datos con ejemplo"
   task :populate => :environment do
-    require 'faker'
     Rake::Task['db:reset'].invoke
     make_users
     make_actions
