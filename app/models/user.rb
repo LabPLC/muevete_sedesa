@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -25,7 +26,7 @@ class User < ActiveRecord::Base
 
   def complete_action!(accion)
     if !doing_action?(accion).nil?
-      completada = relationships.find(accion)
+      completada = relationships.find_by(action_id: accion.id)
       completada.completed = true
       completada.save
 
@@ -33,9 +34,10 @@ class User < ActiveRecord::Base
     end
   end
 
-  def add_points(accion)
-    self.points += accion.points
-    self.save
-  end
+  private
+    def add_points(accion)
+      self.points += accion.points
+      self.save
+    end
 
 end

@@ -31,7 +31,7 @@ namespace :db do
     Action.create!(name: "Accion Saludable 1", desc: "Esta es una accion saludable que puedes checar blablablab", points: 20, level: 1)
     30.times do |n|
       name = Faker::Lorem.sentence(1)
-      desc = Faker::Lorem.sentence(6)
+      desc = Faker::Lorem.sentence(20)
       points = n + 10
       level = 1
       if n >= 10 && n < 20

@@ -14,15 +14,7 @@
               = @action.desc
       .4u
         #sidebar
-          - if @action.canjeable
-            %section
-              %h3
-                Canjea tu código aquí
-              %input{type: "text", required: true}
-          - else
-            %section
-              %h3
-                Mayor información
+          = render 'shared/action_submit_form', locals: {action: @action}
 
 =debug(@action) if Rails.env.development?
               

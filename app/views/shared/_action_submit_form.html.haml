@@ -1,0 +1,24 @@
+- accion = current_user.relationships.find_by(action_id: @action.id)
+- if !accion.nil?
+  - accion1 = current_user.completed_actions.find { |a| a.action_id == @action.id }
+  - if accion1.nil?
+    %section
+      = form_tag('/acciones/users') do 
+        = render 'shared/error_messages', object: @action
+        - if @action.canjeable
+          %h3
+            Canjea tu código aquí
+          .field
+            %input{:name => "code", type: "text"}
+
+        = submit_tag "Completar"
+-else
+  %section
+    = form_tag('/acciones/users') do
+      = render 'shared/error_messages', object: @action
+      - if @action.canjeable
+        %h3
+          Canjea tu código aquí
+        .field
+          %input{:name => "code", type: "text"}
+      = submit_tag "Agregar acción!"
