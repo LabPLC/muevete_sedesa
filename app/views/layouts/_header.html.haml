@@ -5,15 +5,15 @@
         %header#header
           #logo
             %h1
-              %a#logo{ href: '#'} ¡Muévete!
+              %a#logo{ href: root_path} ¡Muévete!
             %span Y cuida tu salud
           %nav#nav
             %ul
               %li.current_page_item
-                %a{ href: '#'} Bienvenido
+                %a{ href: user_home_path} Bienvenido
               %li
                 - if user_signed_in?
-                  %a{ href: '#'}
+                  %a{ href: edit_user_registration_path}
                     = current_user.email
                 - else
                   = link_to 'Iniciar sesión', new_user_session_path
@@ -22,6 +22,6 @@
                   = link_to 'Salir', destroy_user_session_path, method: 'delete'
                 
               %li
-                %a{ href: '#'} Ayuda
+                %a{ href: static_pages_ayuda_path} Ayuda
               
               
