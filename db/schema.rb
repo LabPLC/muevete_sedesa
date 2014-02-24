@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140220235540) do
+ActiveRecord::Schema.define(version: 20140223175934) do
 
   create_table "actions", force: true do |t|
     t.string   "name"
@@ -23,6 +23,17 @@ ActiveRecord::Schema.define(version: 20140220235540) do
     t.boolean  "canjeable",              default: false
     t.string   "code"
   end
+
+  create_table "friend_relationships", force: true do |t|
+    t.integer  "follower_id"
+    t.integer  "followed_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "friend_relationships", ["followed_id"], name: "index_friend_relationships_on_followed_id"
+  add_index "friend_relationships", ["follower_id", "followed_id"], name: "index_friend_relationships_on_follower_id_and_followed_id", unique: true
+  add_index "friend_relationships", ["follower_id"], name: "index_friend_relationships_on_follower_id"
 
   create_table "posts", force: true do |t|
     t.string   "name"
