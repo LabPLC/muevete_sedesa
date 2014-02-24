@@ -5,6 +5,7 @@ namespace :db do
     make_users
     make_actions
     make_user_actions
+    make_user_relationships
     
   end
 
@@ -60,6 +61,15 @@ namespace :db do
     user = users.first
     acciones = Action.all.sample(3)
     acciones.each { | accion | user.do_action!(accion)}
+  end
+
+  def make_user_relationships
+    users = User.all
+    user = User.first
+    followed_users = users[2..50]
+    followers      = users[3..40]
+    followed_users.each { |followed| user.follow!(followed) }
+    followers.each { |follower| follower.follow!(user) }
   end
 
 
