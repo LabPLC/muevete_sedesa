@@ -1,0 +1,4 @@
+= form_for(current_user.friend_relationships.build(followed_id: @user.id)) do |f|
+  %div
+    = f.hidden_field :followed_id
+  = f.submit "Seguir", class: "btn"
