@@ -1,6 +1,10 @@
 SedesaApp::Application.routes.draw do
 
   resources :relationships, only: [:create]
+
+  resources :users, only: [:index] do
+    get :following, :followers
+  end
   post "acciones/users", to: 'actions#agregar', as: 'add_accion_user'
   get "acciones/users", to: 'actions#user', as: 'accion_user'
   get "acciones/:id", to: 'actions#show', as: 'accion'
