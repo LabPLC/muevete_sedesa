@@ -13,6 +13,8 @@
                   = @user.email
                 %p 
                   Administra tu perfil
+                = render 'shared/user_stats'
+                = render 'follow_form' if user_signed_in?
               .5u
                 %ul
                   %li

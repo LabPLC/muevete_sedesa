@@ -1,0 +1,17 @@
+#banner-wrapper
+  .container
+    .row
+      .12u
+        #banner.box
+          %div
+            .row
+              .7u
+                %h2 
+                  = @user.email
+                %p 
+                = render 'shared/user_stats'
+              .5u
+                - if @users.any?
+                  -@users.each do |user|
+                    = @user.first_name
+               

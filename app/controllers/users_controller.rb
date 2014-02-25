@@ -13,6 +13,21 @@ class UsersController < ApplicationController
     @acciones = Action.all.sample(3)
   end
 
+  def following
+    @title = "Siguiendo"
+    @user = User.find(params[:user_id])
+    ## TODO paginar
+    @users = @user.followed_users
+    render 'show_follow'
+  end
+
+  def followers
+    @title = "Seguidores"
+    @user = User.find(params[:user_id])
+    @users = @user.followers
+    render 'show_follow'
+  end
+
   private
     def set_user
       @user = User.find(params[:id])
