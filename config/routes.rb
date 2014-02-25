@@ -10,7 +10,7 @@ SedesaApp::Application.routes.draw do
   post "acciones/users", to: 'actions#agregar', as: 'add_accion_user'
   get "acciones/users", to: 'actions#user', as: 'accion_user'
   get "acciones/:id", to: 'actions#show', as: 'accion'
-  get "/perfil/:id", to: 'users#show'
+  get "/perfil/:id", to: 'users#show', as: 'user_show'
   get "/users", to: 'users#index'
   get "/userhome", to: 'users#home', as: 'user_home'
   devise_for :users
