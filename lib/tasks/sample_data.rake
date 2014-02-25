@@ -30,21 +30,36 @@ namespace :db do
 
   def make_actions
     Action.create!(name: "Accion Saludable 1", desc: "Esta es una accion saludable que puedes checar blablablab", points: 20, level: 1)
-    30.times do |n|
+    Action.create!(name: "Campaña de vacunación 1", desc: "Qué bueno que estas consciente de tu salud. 
+                                                            Invierno es una época del año en donde la población 
+                                                            se encuentra más propensa a enfermedades. Estamos seguros que 
+                                                            con ésta vacuna, estarás más lejos de estar enfermo :)", points: 20, level: 1, canjeable: true, code: 'AAAA-12345')
+    Action.create!(name: "Campaña de vacunación 2", desc: "Con la Influenza AH1N1 no se juega. Qué bueno que estas consciente de tu salud. 
+                                                            Invierno es una época del año en donde la población 
+                                                            se encuentra más propensa a enfermedades. Estamos seguros que 
+                                                            con ésta vacuna, estarás más lejos de estar enfermo :)", points: 20, level: 1, canjeable: true, code: 'AAAA-12345')
+    Action.create!(name: "Muévete por tu salud", desc: "Fomenta la práctica de la actividad física y contribuye al 
+                                                        tratamiento dietetico como usuario de los servicios de salud", points: 10, level: 1)
+    Action.create!(name: "¿Para qué moverme?", desc: "Te permite desestresarte y darte un tiempo para mejorar la circulación
+                                                        sanguinea.", points: 10, level: 1)
+    Action.create!(name: "Participaste en el Cicloton", desc: "Bien por andar en bicicleta y cuidar más tu cuerpo. ", points: 30, level: 1, canjeable: true, code: 'AAAA-12345')
+    Action.create!(name: "Introduce tu'código de Ecobici", desc: "Ganarás 30 puntos por introducir tu tarjeta de Ecobici.", points: 30, level: 1, canjeable: true, code: 'AAAA-12345')
+
+    10.times do |n|
       name = Faker::Lorem.sentence(1)
       desc = Faker::Lorem.sentence(20)
       points = n + 10
       level = 1
-      if n >= 10 && n < 20
+      if n >= 5 && n < 10
         level = 2
-      elsif n >= 20
-        level = 3
-      else 
-        level = 1
+      #elsif n >= 20
+      #  level = 3
+      #else 
+      #  level = 1
       end
       canj = true
       code = "AAAA-12345"
-      if n > 20
+      if n > 5
         canj = false
       end 
       Action.create!(name: name,
