@@ -13,6 +13,8 @@ group :development, :test do
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.9'
   gem "quiet_assets", "~> 1.0.2"
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 gem 'haml'
