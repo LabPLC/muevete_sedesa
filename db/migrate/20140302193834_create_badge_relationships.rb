@@ -6,5 +6,8 @@ class CreateBadgeRelationships < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :badge_relationships, :user_id
+    add_index :badge_relationships, :badge_id
+    add_index :badge_relationships, [:user_id, :badge_id], unique: true
   end
 end
