@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140302193329) do
+ActiveRecord::Schema.define(version: 20140302193834) do
 
   create_table "actions", force: true do |t|
     t.string   "name"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 20140302193329) do
     t.integer  "level",      default: 1
     t.boolean  "canjeable",  default: false
     t.string   "code"
+  end
+
+  create_table "badge_relationships", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "badge_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "badges", force: true do |t|
