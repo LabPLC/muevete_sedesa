@@ -15,12 +15,12 @@ ActiveRecord::Schema.define(version: 20140223175934) do
 
   create_table "actions", force: true do |t|
     t.string   "name"
-    t.string   "desc"
-    t.integer  "points",     limit: 255
+    t.text     "desc"
+    t.integer  "points"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "level",                  default: 1
-    t.boolean  "canjeable",              default: false
+    t.integer  "level",      default: 1
+    t.boolean  "canjeable",  default: false
     t.string   "code"
   end
 
@@ -34,12 +34,6 @@ ActiveRecord::Schema.define(version: 20140223175934) do
   add_index "friend_relationships", ["followed_id"], name: "index_friend_relationships_on_followed_id"
   add_index "friend_relationships", ["follower_id", "followed_id"], name: "index_friend_relationships_on_follower_id_and_followed_id", unique: true
   add_index "friend_relationships", ["follower_id"], name: "index_friend_relationships_on_follower_id"
-
-  create_table "posts", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "relationships", force: true do |t|
     t.integer  "user_id"
