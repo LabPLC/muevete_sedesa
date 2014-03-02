@@ -4,7 +4,7 @@ FactoryGirl.define do
   end
 
   factory :user do
-    email     
+    email
     password  "juancar1os"
     password_confirmation { "juancar1os"}
   end
@@ -14,5 +14,11 @@ FactoryGirl.define do
     desc      "descripcion"
     points    10
     level     30
+  end
+
+  factory :badge do
+    name    "badge1"
+    desc      "descripcion"
+    points    100
   end
 end
