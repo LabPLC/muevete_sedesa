@@ -13,7 +13,7 @@ class ActionsController < ApplicationController
         puts "LALALALALA"
         curr_action = Action.find_by(id: current.action_id)
         current_user.complete_action!(curr_action)
-        flash[:notice] = "Tarea completada"
+        flash[:success] = "Tarea completada"
       else
         current_user.do_action!(@action)
         flash[:notice] = "Tarea pendiente!"

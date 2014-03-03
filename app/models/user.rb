@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
                                           class_name: "FriendRelationship",
                                           dependent: :destroy
   has_many :followers, through: :reverse_friend_relationships, source: :follower
+  before_update :check_points
 
   def doing_action?(accion)
     relationships.find_by(action_id: accion.id)
@@ -57,6 +58,11 @@ class User < ActiveRecord::Base
     def add_points(accion)
       self.points += accion.points
       self.save
+    end
+
+    def check_points
+      #puts "AFTER 100 POINTS" if points > 100
+      puts "POINTS POINTS"
     end
 
 end

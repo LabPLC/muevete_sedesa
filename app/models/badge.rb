@@ -1,4 +1,4 @@
 class Badge < ActiveRecord::Base
 
-  has_many :badge_relationships, foreign_key: "user_id", dependent: :destroy
+  has_many :user_relationships, foreign_key: "badge_id", dependent: :destroy
 end
