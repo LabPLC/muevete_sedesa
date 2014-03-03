@@ -13,7 +13,15 @@ class ActionsController < ApplicationController
         puts "LALALALALA"
         curr_action = Action.find_by(id: current.action_id)
         current_user.complete_action!(curr_action)
+
+        ### Temporal para mostrar una badge
+        if current_user.badge_relationships.count == 0 && current_user.points > 1
+          Badge.create(name: "20 puntos", desc: "Felicidades! Has completado las suficientes actividades como para ser acreedor a esta medalla!")
+          current_user.add_badge!(Badge.first)
+          flash[:new_badge] = true
+        end
         flash[:success] = "Tarea completada"
+
       else
         current_user.do_action!(@action)
         flash[:notice] = "Tarea pendiente!"

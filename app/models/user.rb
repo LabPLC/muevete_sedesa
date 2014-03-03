@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
                                           class_name: "FriendRelationship",
                                           dependent: :destroy
   has_many :followers, through: :reverse_friend_relationships, source: :follower
+  has_many :badge_relationships, foreign_key: "user_id", dependent: :destroy
   before_update :check_points
 
   def doing_action?(accion)
@@ -52,6 +53,14 @@ class User < ActiveRecord::Base
 
   def unfollow!(other_user)
     friend_relationships.find_by(followed_id: other_user).destroy
+  end
+
+  def has_badge?(badge)
+    badge_relationships.find_by(badge_id: badge.id)
+  end
+
+  def add_badge!(badge)
+    badge_relationships.create!(badge_id: badge.id)
   end
 
   private
