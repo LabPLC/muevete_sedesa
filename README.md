@@ -1,10 +1,10 @@
-# ¡Muévete!
+# ¡Cuídate!
 
 Busca formas de mejorar la calidad de vida y sallud de la ciudadanía mediante gamificación así como mostrar información sobre el estado de salud de la Ciudad de México
 
 ## Instalación
 
-Ésta aplicación requiere **Postgres** para poder ser instalada. 
+Ésta aplicación requiere **Postgres** para poder ser instalada.
 
 ```
 git clone https://github.com/LabPLC/muevete_sedesa/
@@ -15,7 +15,7 @@ bundle install
 
 ## Uso en desarrollo
 
-Únicamente activa el servidor 
+Únicamente activa el servidor
 
 ```
 rails server

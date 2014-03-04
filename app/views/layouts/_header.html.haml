@@ -5,8 +5,8 @@
         %header#header
           #logo
             %h1
-              %a#logo{ href: root_path} ¡Muévete!
-            %span Y cuida tu salud
+              %a#logo{ href: root_path} ¡Cuídate!
+            %span E involúcrate con tu salud
           %nav#nav
             %ul
               %li.current_page_item
@@ -20,8 +20,8 @@
               - if user_signed_in?
                 %li
                   = link_to 'Salir', destroy_user_session_path, method: 'delete'
-                
+
               %li
                 %a{ href: static_pages_ayuda_path} Ayuda
-              
-              
+
+
