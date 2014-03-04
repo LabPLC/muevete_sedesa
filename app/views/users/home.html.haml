@@ -25,8 +25,9 @@
                   %li
                     %a.button.alt.big.fa.fa-question-circle{ href: '#'} Premios
                   %li
-                    %a.button.big.fa.fa-calendar{ href: '#'}
-                      Actividades
+                    %a.button.big.fa.fa-heart{ href: user_following_path(current_user)}
+                      = current_user.followed_users.count
+                      Amigos
 
 
 #features-wrapper

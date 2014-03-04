@@ -6,12 +6,16 @@
           %div
             .row
               .7u
-                %h2 
-                  = @user.email
-                %p 
+                %h2
+                  = @user.first_name
+                %p
                 = render 'shared/user_stats'
               .5u
                 - if @users.any?
                   -@users.each do |user|
-                    = @user.first_name
-               
+                    %div
+                      %h3
+                        = user.first_name + " " + user.last_name
+                      %p
+                        =user.points
+
