@@ -18,7 +18,8 @@ class ActionsController < ApplicationController
         if current_user.badge_relationships.count == 0 && current_user.points > 1
           Badge.create(name: "20 puntos", desc: "Felicidades! Has completado las suficientes actividades como para ser acreedor a esta medalla!")
           current_user.add_badge!(Badge.first)
-          flash[:new_badge] = true
+          toast :success, "!Felicidades! Obtuviste la medalla: " + Badge.first.name
+        ###
         end
         flash[:success] = "Tarea completada"
 

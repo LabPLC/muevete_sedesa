@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
     user_home_path
   end
 
+  def toast(type, text)
+    flash[:toastr] = { type => text }
+  end
+
   protected
 
   def devise_parameter_sanitizer
