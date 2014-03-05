@@ -16,6 +16,9 @@
                   Administra tu perfil
                 %h3
                   Medallas
+                %div
+                  - if current_user.badge_relationships.count > 0
+                    = render partial: 'badges', locals: {user: current_user}
               .5u
                 %ul
                   %li

@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
                                           dependent: :destroy
   has_many :followers, through: :reverse_friend_relationships, source: :follower
   has_many :badge_relationships, foreign_key: "user_id", dependent: :destroy
+  has_many :badges, through: :badge_relationships, source: :badge
   before_update :check_points
 
   def doing_action?(accion)
