@@ -20,6 +20,7 @@ gem 'haml'
 gem 'devise'
 gem 'faker'
 gem 'holder_rails'
+gem "font-awesome-rails"
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'

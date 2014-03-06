@@ -9,9 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require bootstrap.min
- *= require skel-noscript
- *= require style
- *= require style-desktop
  *= require toastr.min
  *= require_self
  *= require_tree .

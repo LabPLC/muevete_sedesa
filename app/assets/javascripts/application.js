@@ -14,8 +14,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min
-//= require config
-//= require skel.min
-//= require skel-panels.min
 //= require toastr.min
 //= require_tree .
