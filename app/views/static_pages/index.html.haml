@@ -1,18 +1,21 @@
 - provide(:title, "Inicio")
-#banner-wrapper
-  .container
-    .row
-      .12u
-        #banner.box
-          %div
-            .row
-              .7u
-                %h2 Hola! Esto es "¡Cuídate!"
-                %p Es un proyecto del Laboratorio para la Ciudad para buscar transformar en un juego cuidar tu salud.
-              .5u
-                %ul
-                  %li
-                    %a.button.big.fa.fa-arrow-circle-right{ href: user_home_path} ¡Cuídate!
-                  %li
-                    %a.button.alt.big.fa.fa-question-circle{ href: static_pages_info_path} Información
+
+.container
+  .jumbotron
+    %h1
+      ¡Hola! Esto es: "¡Cuídate!"
+    %p
+      ¡Cuídate! es un proyecto del Laboratorio para la Ciudad que busca transformar en un juego cuidar tu salud.
+    .div
+      %p
+        %a.btn.btn-primary.btn-lg{href: user_home_path}
+          ¡Cuídate!
+          %i.fa.fa-arrow-circle-right
+        %a.btn.btn-info.btn-lg{href: static_pages_info_path}
+          Información
+          %i.fa.fa-question-circle
+
+
+
+
 
