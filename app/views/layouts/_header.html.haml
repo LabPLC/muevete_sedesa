@@ -1,3 +1,37 @@
+.navbar.navbar-inverse
+  .navbar-header
+    %button.navbar-toggle{"data-toggle" => "collapse", "data-target" => ".navbar-inverse-"}
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    %a#logo.navbar-brand{ href: root_path} ¡Cuídate!
+  .navbar-collapse.collapse.navbar-inverse-collapse
+    %ul.nav.navbar-nav.navbar-right
+      %li.active
+        %a{ href: user_home_path} Bienvenido
+      %li
+        %a{ href: static_pages_ayuda_path} Ayuda
+      %li
+        %a{ href: static_pages_info_path} Información
+      %li.dropdown
+        - if user_signed_in?
+          %a.dropdown-toggle{ href: user_home_path, "data-toggle" => "dropdown"}
+            = current_user.first_name
+          %ul.dropdown-menu
+            %li
+              %a{href: edit_user_registration_path}
+                Edita tu perfil
+            %li.divider
+            %li
+              = link_to 'Salir', destroy_user_session_path, method: 'delete'
+
+        - else
+          = link_to 'Iniciar sesión', new_user_session_path
+
+
+
+
+
 #header-wrapper
   .container
     .row
