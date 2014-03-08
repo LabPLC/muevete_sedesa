@@ -1,59 +1,15 @@
 - provide(:title, "Perfil")
 
+= render 'sidebar'
 
-#banner-wrapper
-  .container
+#page-wrapper
+  .page-content
     .row
-      .12u
-        #banner.box
-          %div
-            .row
-              .7u
-                %h2
-                  Hola
-                  = current_user.first_name
-                %p
-                  Administra tu perfil
-                %h3
-                  Medallas
-              .5u
-                %ul
-                  %li
-                    %a.button.big.fa.fa-arrow-circle-right{ href: '#'}
-                      =current_user.points
-                      puntos
-                  %li
-                    %a.button.alt.big.fa.fa-question-circle{ href: '#'} Premios
-                  %li
-                    %a.button.big.fa.fa-heart{ href: user_following_path(current_user)}
-                      = current_user.followed_users.count
-                      Amigos
+      .col-lg-12
+        .page-title
+          %h1
+            Dashboard
+            %small
+              Lalalala
 
 
-#features-wrapper
-
-  .container
-    %h2
-      Acciones saludables
-    .row
-      - @acciones.each do |accion|
-        .4u
-          = render partial: "shared/action_show", locals: {accion: accion, valor: 'lava'}
-
-.features-wrapper
-  .container
-    %h2
-      Acciones completadas
-    .row
-      - current_user.completed_actions.each do |relacion|
-        .4u
-          = render partial: "shared/action_show", locals: {accion: relacion.action, valor: 'sky'}
-
-.features-wrapper
-  .container
-    %h2
-      Acciones por hacer
-    .row
-      - current_user.todo_actions.each do |relacion|
-        .4u
-          = render partial: "shared/action_show", locals: {accion: relacion.action, valor: 'social'}

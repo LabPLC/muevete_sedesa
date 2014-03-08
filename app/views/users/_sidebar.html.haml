@@ -1,0 +1,23 @@
+%nav.navbar-side{role: "navigation"}
+  .navbar-collapse.sidebar-collapse.collapse
+    %ul#side.nav.navbar-nav.side-nav
+      %li.side-user.hidden-xs
+        %img.img-circle{src: holder_tag("100x100")}
+        %p.welcome
+          %i.fa.fa-key
+          Logged in:
+        %p.name.tooltip-sidebar-logout
+          JC SR
+        %li.nav-search
+          %form{role: "form"}
+            %input{type:"search", class: "form-control", placeholder: "Buscar"}
+            %button.btn
+              %i.fa.fa-search
+        %li
+          %a
+            %i.fa.fa-dashboard
+            Dashboard
+        %li
+          %a
+            %i.fa.fa-calendar
+            Actividades

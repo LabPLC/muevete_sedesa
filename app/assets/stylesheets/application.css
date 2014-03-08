@@ -11,6 +11,8 @@
  *= require bootstrap.min
  *= require toastr.min
  *= require font-awesome
+ *= require dashboard
+ *= require dashboard-plugins
  *= require_self
  *= require_tree .
  */

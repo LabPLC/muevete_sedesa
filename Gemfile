@@ -21,6 +21,7 @@ gem 'devise'
 gem 'faker'
 gem 'holder_rails'
 gem "font-awesome-rails"
+gem 'jquery-slimscroll-rails'
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'

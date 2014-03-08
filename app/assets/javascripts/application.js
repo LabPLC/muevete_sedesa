@@ -14,5 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min
+//= require jquery.slimscroll.min
+//= require dashboard
 //= require toastr.min
 //= require_tree .
