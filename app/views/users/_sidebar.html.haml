@@ -2,7 +2,10 @@
   .navbar-collapse.sidebar-collapse.collapse
     %ul#side.nav.navbar-nav.side-nav
       %li.side-user.hidden-xs
-        %img.img-circle{src: holder_tag("100x100")}
+        - if user_signed_in?
+          = gravatar_for current_user
+        - else
+          = gravatar_for @user
         %p.welcome
           %i.fa.fa-key
           Logged in:
