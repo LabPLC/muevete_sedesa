@@ -2,27 +2,64 @@
 
 = render 'sidebar'
 
-#banner-wrapper
-  .container
+#page-wrapper
+  .page-content
     .row
-      .12u
-        #banner.box
-          %div
-            .row
-              .7u
-                %h2
-                  Hola
-                  = @user.email
-                %p
-                  Administra tu perfil
-                = render 'shared/user_stats'
-                = render 'follow_form' if user_signed_in?
-              .5u
-                %ul
-                  %li
-                    %a.button.big.fa.fa-arrow-circle-right{ href: '#'}20 puntos
-                  %li
-                    %a.button.alt.big.fa.fa-question-circle{ href: '#'} Premios
-                  %li
-                    %a.button.big.fa.fa-calendar{ href: '#'}
-                      Actividades
+      .col-lg-12
+        .page-title
+          %h1
+            Perfil de
+            = @user.first_name
+            %small
+              = @user.last_name
+    .row
+      .col-lg-2.col-sm-6
+        .circle-tile
+          %a{href: '#'}
+            .circle-tile-heading.orange
+              %i.fa.fa-users.fa-fw.fa-3x
+          .circle-tile-content.orange
+            .circle-tile-description.text-faded
+              Seguidores & Siguiendo
+            .circle-tile-number.text-faded
+              = current_user.followers.count
+              |
+              = current_user.followed_users.count
+              %span#sparklineA
+            - if user_signed_in?
+              - unless current_user == @user
+                -if !current_user.following?(@user)
+                  = render 'follow'
+                - else
+                  = render 'unfollow'
+
+      .col-lg-2.col-sm-6
+        .circle-tile
+          %a{href: '#'}
+            .circle-tile-heading.green
+              %i.fa.fa-trophy.fa-fw.fa-3x
+          .circle-tile-content.green
+            .circle-tile-description.text-faded
+              Medallas
+            .circle-tile-number.text-faded
+              = @user.badges.count
+              %span#sparklineA
+            %a.circle-tile-footer{href: '#'}
+              Ver:
+              %i.fa.fa-chevron-circle-right
+
+      -# Total de puntos
+      .col-lg-2.col-sm-6
+        .circle-tile
+          %a
+            .circle-tile-heading.blue
+              %i.fa.fa-star.fa-fw.fa-3x
+          .circle-tile-content.blue
+            .circle-tile-description.text-faded
+              Total de Puntos
+            .circle-tile-number.text-faded
+              = current_user.points
+              puntos
+              %span#sparklineA
+            %span.circle-tile-footer
+              %i.fa.fa-plus-right

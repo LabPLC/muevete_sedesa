@@ -63,6 +63,10 @@ class User < ActiveRecord::Base
     badge_relationships.create!(badge_id: badge.id)
   end
 
+  def badges
+    badge_relationships
+  end
+
   private
     def add_points(accion)
       self.points += accion.points
