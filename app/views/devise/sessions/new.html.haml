@@ -1,16 +1,34 @@
-%h2 Sign in
-= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-  %div
-    = f.label :email
-    %br/
-    = f.email_field :email, :autofocus => true
-  %div
-    = f.label :password
-    %br/
-    = f.password_field :password
-  - if devise_mapping.rememberable?
-    %div
-      = f.check_box :remember_me
-      = f.label :remember_me
-  %div= f.submit "Sign in"
-= render "devise/shared/links"
+
+.container
+  .row
+    .col-md-4.col-md-offset-4
+      .login-banner.text-center
+        %h1
+          %i.fa.fa-users
+          ¡Cuídate!
+      .portlet.portlet-orange
+        .portlet-heading.login-heading
+          .portlet-title
+            %h4
+              Inicia sesión
+          .portlet-widgets
+            %a.btn.btn-white.btn-xs{href: '#'}
+              %i.fa.fa-plus-circle
+              ¿Nuevo usuario?
+          .clearfix
+        .portlet-body
+          = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+            %div.form-group
+              = f.label :email
+              %br/
+              = f.email_field :email, :autofocus => true
+            %div.form-group
+              = f.label :password
+              %br/
+              = f.password_field :password
+            - if devise_mapping.rememberable?
+              %div.form-group
+                = f.check_box :remember_me
+                = f.label "recordarme?"
+            %div= f.submit "Iniciar Sesión", class: "btn btn-lg btn-orange btn-block"
+          = render "devise/shared/links"
