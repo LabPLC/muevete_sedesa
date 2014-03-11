@@ -11,5 +11,79 @@
             Dashboard
             %small
               Lalalala
+          %ol.breadcrumb
+            %li.active
+              %i.fa.fa-dashboard
+              Dashboard
+            %li.pull-right
+              #reportrange.btn.btn-green.btn-square.date-picker
+                %i.fa.fa-calendar
+                %span.date-range
 
+    -# Acciones por hacer
+    .row
+      .col-lg-2.col-sm-6
+        .circle-tile
+          %a{href: '#'}
+            .circle-tile-heading.green
+              %i.fa.fa-users.fa-fw.fa-3x
+          .circle-tile-content.green
+            .circle-tile-description.text-faded
+              Acciones por hacer
+            .circle-tile-number.text-faded
+              = current_user.todo_actions.count
+              %span#sparklineA
+            %a.circle-tile-footer{href: '#'}
+              Más información
+              %i.fa.fa-chevron-circle-right
 
+      -# Total de puntos
+      .col-lg-2.col-sm-6
+        .circle-tile
+          %a{href: '#'}
+            .circle-tile-heading.blue
+              %i.fa.fa-users.fa-fw.fa-3x
+          .circle-tile-content.blue
+            .circle-tile-description.text-faded
+              Total de Puntos e Historial
+            .circle-tile-number.text-faded
+              = current_user.points
+              puntos
+              %span#sparklineA
+            %a.circle-tile-footer{href: '#'}
+              Historial
+              %i.fa.fa-chevron-circle-right
+
+      -# Acciones disponibles
+      .col-lg-2.col-sm-6
+        .circle-tile
+          %a{href: '#'}
+            .circle-tile-heading.red
+              %i.fa.fa-tasks.fa-fw.fa-3x
+          .circle-tile-content.red
+            .circle-tile-description.text-faded
+              Acciones Disponibles
+            .circle-tile-number.text-faded
+              = Action.count
+              acciones
+              %span#sparklineA
+            %a.circle-tile-footer{href: '#'}
+              Ver todas las acciones
+              %i.fa.fa-chevron-circle-right
+
+      -# Acciones realizadas
+      .col-lg-2.col-sm-6
+        .circle-tile
+          %a{href: '#'}
+            .circle-tile-heading.purple
+              %i.fa.fa-check.fa-fw.fa-3x
+          .circle-tile-content.purple
+            .circle-tile-description.text-faded
+              Acciones realizadas
+            .circle-tile-number.text-faded
+              = current_user.points
+              puntos
+              %span#sparklineA
+            %a.circle-tile-footer{href: '#'}
+              Historial
+              %i.fa.fa-chevron-circle-right

@@ -16,11 +16,18 @@
       %li.dropdown
         - if user_signed_in?
           %a.dropdown-toggle{ href: user_home_path, "data-toggle" => "dropdown"}
+            %i.fa.fa-user
             = current_user.first_name
-          %ul.dropdown-menu
+          %ul.dropdown-menu.dropdown-user
             %li
               %a{href: edit_user_registration_path}
                 Edita tu perfil
+            %li
+              %a{href: '#'}
+                %i.fa.fa-envelope
+                Notificaciones
+                %span.badge.orange.pull-right
+                  10
             %li.divider
             %li
               = link_to 'Salir', destroy_user_session_path, method: 'delete'
