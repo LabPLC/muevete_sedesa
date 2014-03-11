@@ -1,5 +1,7 @@
 - provide(:title, "Perfil")
 
+= render 'sidebar'
+
 #banner-wrapper
   .container
     .row
@@ -8,10 +10,10 @@
           %div
             .row
               .7u
-                %h2 
+                %h2
                   Hola
                   = @user.email
-                %p 
+                %p
                   Administra tu perfil
                 = render 'shared/user_stats'
                 = render 'follow_form' if user_signed_in?
