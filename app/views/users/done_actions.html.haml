@@ -3,11 +3,8 @@
 #page-wrapper
   .page-content
     .row
-      .col-lg-12
-        .page-title
-          %h1
-            Acciones por hacer
+      .col-lg-4
+        %h1 Acciones completadas
     .row
       - current_user.completed_actions.each do |relacion|
-        .4u
-          = render partial: "shared/action_show", locals: {accion: relacion.action, valor: 'sky'}
+        = render partial: "shared/action_show", locals: {accion: relacion.action, valor: 'blue'}

@@ -1,10 +1,14 @@
 .navbar.navbar-inverse
   .navbar-header
-    %button.navbar-toggle{"data-toggle" => "collapse", "data-target" => ".navbar-inverse-collapse"}
+    %button.navbar-toggle.pull-right{"data-toggle" => "collapse", "data-target" => ".sidebar-collapse"}
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
     %a#logo.navbar-brand{ href: root_path} ¡Cuídate!
+  .nav-top
+    %ul.nav.navbar-left
+      %li.tooltip-sidebar-toggle
+        %a#sidebar-toggle{href: '#', "data-toggle" => 'tooltip', "data-placement"=>"right", "title"=>"encoge"}
   .navbar-collapse.collapse.navbar-inverse-collapse
     %ul.nav.navbar-nav.navbar-right
       %li.active

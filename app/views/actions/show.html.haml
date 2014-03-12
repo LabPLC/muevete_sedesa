@@ -1,3 +1,14 @@
+
+
+#page-wrapper
+  .page-content
+    .row
+      .col-lg-12
+        .page-title
+          %h1
+            =@action.name
+
+
 #main-wrapper
   .container
     .row
@@ -21,4 +32,4 @@
           = render 'shared/action_submit_form', locals: {action: @action}
 
 =debug(@action) if Rails.env.development?
-              
+

@@ -1,0 +1,25 @@
+- @user ||= current_user if user_signed_in?
+
+%nav.navbar-side{role: "navigation"}
+  .navbar-collapse.sidebar-collapse.collapse
+    %ul#side.nav.navbar-nav.side-nav
+      %li.side-user.hidden-xs
+        = gravatar_for @user
+        %p.welcome
+          %i.fa.fa-key
+          Logged in:
+        %p.name.tooltip-sidebar-logout
+          = @user.first_name
+        %li.nav-search
+          %form{role: "form"}
+            %input{type:"search", class: "form-control", placeholder: "Buscar"}
+            %button.btn
+              %i.fa.fa-search
+        %li
+          %a
+            %i.fa.fa-dashboard
+            Dashboard
+        %li
+          %a
+            %i.fa.fa-calendar
+            Actividades

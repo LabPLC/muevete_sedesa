@@ -1,12 +1,21 @@
-%section.box.box-feature.action-card
-  %a.image.image-full{ href: accion_path(accion)}
-    = holder_tag "300x200/#{valor}"
-  .inner
-    %header
-      %h2
-        = accion.name
-      %span
+.col-lg-4
+  .portlet{class: "portlet-#{valor}"}
+    .portlet-heading
+      .portlet-title
+        %h4
+          = accion.name
+      .portlet-widgets
+        %a.btn.btn-xs.btn-purple{href: accion_path(accion)}
+          Ver más
+        %span.divider
+        %a{href: "#accion-#{accion.id}", "data-parent" => '#accordion', 'data-toggle'=>'collapse'}
+          %i.fa.fa-chevron-down
+      .clearfix
+    .panel-collapse.collapse-in{id: "accion-#{accion.id}"}
+      .portlet-body
+        %p
+          = accion.desc
+      .portlet-footer
+        Esta acción vale:
         = accion.points
-    %p
-      = accion.desc
-      = link_to "Acc", accion_path(accion)
+        puntos
