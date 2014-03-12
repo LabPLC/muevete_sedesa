@@ -13,6 +13,8 @@ SedesaApp::Application.routes.draw do
   get "/perfil/:id", to: 'users#show', as: 'user_show'
   get "/users", to: 'users#index'
   get "/userhome", to: 'users#home', as: 'user_home'
+  get "/userhome/todo", to: 'users#todo_actions', as: 'todo_user_actions'
+  get "/userhome/done", to: 'users#done_actions', as: 'done_user_actions'
   devise_for :users
   #get "static_pages/index"
   get "static_pages/ayuda"
@@ -57,7 +59,7 @@ SedesaApp::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

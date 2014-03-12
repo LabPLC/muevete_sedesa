@@ -1,0 +1,15 @@
+- provide(:title, "Acciones por hacer")
+
+= render 'sidebar'
+
+#page-wrapper
+  .page-content
+    .row
+      .col-lg-12
+        .page-title
+          %h1
+            Acciones por hacer
+    .row
+      - current_user.todo_actions.each do |relacion|
+        .4u
+          = render partial: "shared/action_show", locals: {accion: relacion.action, valor: 'sky'}

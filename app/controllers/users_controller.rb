@@ -13,6 +13,12 @@ class UsersController < ApplicationController
     @acciones = Action.all.sample(3)
   end
 
+  def todo_actions
+  end
+
+  def done_actions
+  end
+
   def following
     @title = "Siguiendo"
     @user = User.find(params[:user_id])
