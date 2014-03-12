@@ -22,9 +22,9 @@
             .circle-tile-description.text-faded
               Seguidores & Siguiendo
             .circle-tile-number.text-faded
-              = current_user.followers.count
+              = @user.followers.count
               |
-              = current_user.followed_users.count
+              = @user.followed_users.count
               %span#sparklineA
             - if user_signed_in?
               - unless current_user == @user
@@ -58,7 +58,7 @@
             .circle-tile-description.text-faded
               Total de Puntos
             .circle-tile-number.text-faded
-              = current_user.points
+              = @user.points
               puntos
               %span#sparklineA
             %span.circle-tile-footer

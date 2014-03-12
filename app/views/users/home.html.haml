@@ -4,6 +4,7 @@
 
 #page-wrapper
   .page-content
+    = render 'shared/notifications'
     .row
       .col-lg-12
         .page-title
@@ -33,7 +34,7 @@
             .circle-tile-number.text-faded
               = current_user.todo_actions.count
               %span#sparklineA
-            %a.circle-tile-footer{href: '#'}
+            %a.circle-tile-footer{href: todo_user_actions}
               Más información
               %i.fa.fa-chevron-circle-right
 
@@ -84,6 +85,6 @@
               = current_user.points
               puntos
               %span#sparklineA
-            %a.circle-tile-footer{href: '#'}
+            %a.circle-tile-footer{href: done_user_actions}
               Historial
               %i.fa.fa-chevron-circle-right

@@ -1,15 +1,14 @@
-.navbar.navbar-inverse
+.navbar-top{role: 'navigation'}
   .navbar-header
-    %button.navbar-toggle.pull-right{"data-toggle" => "collapse", "data-target" => ".sidebar-collapse"}
-      %span.icon-bar
-      %span.icon-bar
-      %span.icon-bar
-    %a#logo.navbar-brand{ href: root_path} ¡Cuídate!
+    %button.navbar-toggle.pull-right{"data-toggle" => "collapse", "data-target" => ".sidebar-collapse", type: 'button'}
+      %i.fa.fa-bars
+    .navbar-brand
+      %a{ href: root_path} ¡Cuídate!
   .nav-top
     %ul.nav.navbar-left
       %li.tooltip-sidebar-toggle
-        %a#sidebar-toggle{href: '#', "data-toggle" => 'tooltip', "data-placement"=>"right", "title"=>"encoge"}
-  .navbar-collapse.collapse.navbar-inverse-collapse
+        %a#sidebar-toggle{href: '#', "data-toggle" => 'tooltip', "data-placement"=>"right", "title"=>"encojer"}
+          %i.fa.fa-bars
     %ul.nav.navbar-nav.navbar-right
       %li.active
         %a{ href: user_home_path} Bienvenido
