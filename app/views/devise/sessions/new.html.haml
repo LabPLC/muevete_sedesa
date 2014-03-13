@@ -19,6 +19,7 @@
           .clearfix
         .portlet-body
           = render "devise/shared/links"
+          %hr
           ¿No tienes Facebook / Twitter / G+?
           = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
             %div.form-group
