@@ -34,7 +34,7 @@
             .circle-tile-number.text-faded
               = current_user.todo_actions.count
               %span#sparklineA
-            %a.circle-tile-footer{href: todo_user_actions}
+            %a.circle-tile-footer{href: todo_user_actions_path}
               Más información
               %i.fa.fa-chevron-circle-right
 
@@ -85,6 +85,6 @@
               = current_user.points
               puntos
               %span#sparklineA
-            %a.circle-tile-footer{href: done_user_actions}
+            %a.circle-tile-footer{href: done_user_actions_path}
               Historial
               %i.fa.fa-chevron-circle-right
