@@ -23,6 +23,11 @@ gem 'holder_rails'
 gem "font-awesome-rails"
 gem 'jquery-slimscroll-rails'
 
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-twitter'
+
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'

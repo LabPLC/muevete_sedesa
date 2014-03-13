@@ -15,7 +15,7 @@ SedesaApp::Application.routes.draw do
   get "/userhome", to: 'users#home', as: 'user_home'
   get "/userhome/todo", to: 'users#todo_actions', as: 'todo_user_actions'
   get "/userhome/done", to: 'users#done_actions', as: 'done_user_actions'
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks'}
   #get "static_pages/index"
   get "static_pages/ayuda"
   get "static_pages/info"
