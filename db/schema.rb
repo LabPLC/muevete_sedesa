@@ -31,6 +31,10 @@ ActiveRecord::Schema.define(version: 20140313005134) do
     t.datetime "updated_at"
   end
 
+  add_index "badge_relationships", ["badge_id"], name: "index_badge_relationships_on_badge_id"
+  add_index "badge_relationships", ["user_id", "badge_id"], name: "index_badge_relationships_on_user_id_and_badge_id", unique: true
+  add_index "badge_relationships", ["user_id"], name: "index_badge_relationships_on_user_id"
+
   create_table "badges", force: true do |t|
     t.string   "name"
     t.text     "desc"
