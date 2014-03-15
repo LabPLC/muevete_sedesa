@@ -69,18 +69,30 @@ class User < ActiveRecord::Base
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid ).first
+    puts "aa"
+    puts user
     if user
+      user.access_token_fb = auth.credentials.token
+      puts auth.credentials.token
+      user.save
       return user
     else
       registered_user = User.where(:email => auth.info.email).first
       if registered_user
+        registered_user.access_token_fb = auth.credentials.token
+        puts auth.credentials.token
+        registered_user.save
         return registered_user
       else
-        user = User.create(first_name: auth.extra.raw_info.name,
+        user = User.create(first_name: auth.extra.raw_info.first_name,
+                                        last_name: auth.extra.raw_info.last_name,
                                         provider: auth.provider,
                                         uid: auth.uid,
                                         email: auth.info.email,
-                                        password: Devise.friendly_token[0,20])
+                                        password: Devise.friendly_token[0,20],
+                                        access_token_fb: auth.credentials.token)
+        puts auth.credentials.token
+        return user
       end
     end
 
@@ -109,10 +121,16 @@ class User < ActiveRecord::Base
   def self.find_for_twitter_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
     if user
+      user.access_token_tw = auth.credentials.token
+      puts auth.credentials.token
+      user.save
       return user
     else
       registered_user = User.where(:email => auth.uid + "@twitter.com").first
       if registered_user
+        user.access_token_tw = auth.credentials.token
+        puts auth.credentials.token
+        user.save
         return registered_user
       else
         user = User.create(first_name:auth.info.name,
@@ -120,6 +138,7 @@ class User < ActiveRecord::Base
           uid:auth.uid,
           email:auth.uid+"@twitter.com",
           password:Devise.friendly_token[0,20],
+          access_token_tw: auth.credentials.token
         )
       end
     end
