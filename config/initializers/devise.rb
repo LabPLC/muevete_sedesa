@@ -231,7 +231,7 @@ Devise.setup do |config|
   API_KEYS = YAML::load_file("#{Rails.root}/config/api-keys.yml")[Rails.env]
 
   require "omniauth-facebook"
-  config.omniauth :facebook, API_KEYS['facebook']['api_key'], API_KEYS['facebook']['api_secret']
+  config.omniauth :facebook, API_KEYS['facebook']['api_key'], API_KEYS['facebook']['api_secret'], scope: "email publish_actions"
 
   require "omniauth-google-oauth2"
   config.omniauth :google_oauth2, API_KEYS['google_oauth2']['api_key'], API_KEYS['google_oauth2']['api_secret'], { access_type: "offline", approval_prompt: "" }
