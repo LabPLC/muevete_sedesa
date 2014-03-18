@@ -43,7 +43,7 @@
         .circle-tile
           %a{href: '#'}
             .circle-tile-heading.blue
-              %i.fa.fa-users.fa-fw.fa-3x
+              %i.fa.fa-star.fa-fw.fa-3x
           .circle-tile-content.blue
             .circle-tile-description.text-faded
               Total de Puntos e Historial
@@ -82,9 +82,63 @@
             .circle-tile-description.text-faded
               Acciones realizadas
             .circle-tile-number.text-faded
-              = current_user.points
+              = current_user.completed_actions.count
               puntos
               %span#sparklineA
             %a.circle-tile-footer{href: done_user_actions_path}
               Historial
               %i.fa.fa-chevron-circle-right
+      .col-lg-2.col-sm-6
+        .circle-tile
+          %a{href: '#'}
+            .circle-tile-heading.orange
+              %i.fa.fa-users.fa-fw.fa-3x
+          .circle-tile-content.orange
+            .circle-tile-description.text-faded
+              Seguidores & Siguiendo
+            .circle-tile-number.text-faded
+              = current_user.followers.count
+              |
+              = current_user.followed_users.count
+              %span#sparklineA
+            - if user_signed_in?
+              - unless current_user == @user
+                -if !current_user.following?(@user)
+                  = render 'follow'
+                - else
+                  = render 'unfollow'
+    .row
+      .col-lg-6
+        .portlet.portlet-default
+          .portlet-heading
+            .portlet-title
+              %h4
+                Actividad de Amigos
+            .clearfix
+          .portlet-body
+            .table-responsive
+              %table.table
+                %thead
+                  %th
+                    Posición
+                  %th
+                    Nombre
+                  %th
+                    Total de Acciones
+                  %th
+                    Puntos
+                %tbody
+                  - i = 1
+                  - current_user.followed_users.first(4).each do |u|
+                    %tr
+                      %td
+                        = i
+                      %td
+                        = u.first_name
+                      %td
+                        = u.completed_actions.count
+                      %td
+                        = u.points
+                      - i += 1
+
+
