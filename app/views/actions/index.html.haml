@@ -1,0 +1,26 @@
+-if user_signed_in?
+  = render 'shared/sidebar'
+
+#page-wrapper
+  .page-content
+    .row
+      .col-lg-6
+        .tile.green.checklist-tile
+          %h3
+            %i.fa.fa-check-square-o
+            Acciones Saludables
+          .checklist
+            - @actions.each do |a|
+              - if !current_user.doing_action?(Action.find_by(id: a.id)).nil?
+                - selected = "selected"
+              %label{class: selected}
+                %a{href: accion_path(a)}
+                  - if !current_user.doing_action?(Action.find_by(id: a.id)).nil?
+                    %input{type: "checkbox", :checked => true}
+                    %i.fa.fa-wrench.fa-fw.text-faded
+                  -else
+                    %input{type: "checkbox", :checked => false}
+                    %i.fa.fa-wrench.fa-fw.text-faded
+                  = a.name
+                  %span.task-time.text-faded.pull-right
+                    = a.points

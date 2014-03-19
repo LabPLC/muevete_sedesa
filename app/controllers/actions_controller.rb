@@ -4,6 +4,10 @@ class ActionsController < ApplicationController
 
   end
 
+  def index
+    @actions = Action.all
+  end
+
   def agregar
     @action = Action.find(params[:id])
     if !current_user.nil?
