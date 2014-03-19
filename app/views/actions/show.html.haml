@@ -1,4 +1,6 @@
 
+- if user_signed_in?
+  = render 'shared/sidebar'
 
 #page-wrapper
   .page-content
@@ -7,29 +9,18 @@
         .page-title
           %h1
             =@action.name
-
-
-#main-wrapper
-  .container
     .row
-      .8u.skel-cell-important
-        #content
-          %article.last
-            %h2
-              = @action.name
-            %p
-              Aquí va un resumen de esta accion saludable
-            %h3
-              Descripción
-            %p
-              = @action.desc
-            - if !@action.canjeable && !current_user.nil?
-              %h3
-                Pasos para completar
-              %progress#barbar{value: 30, max: 100}
-      .4u
-        #sidebar
-          = render 'shared/action_submit_form', locals: {action: @action}
+      .col-lg-6
+        %h3
+          Descripción de la acción
+        %p
+          = @action.desc
+        - if !@action.canjeable && !current_user.nil?
+          %h3
+            Pasos para completar
+          %progress#barbar{value: 30, max: 100}
+      .col-lg-6
+        = render 'shared/action_submit_form', locals: {action: @action}
 
-=debug(@action) if Rails.env.development?
+  =debug(@action) if Rails.env.development?
 
