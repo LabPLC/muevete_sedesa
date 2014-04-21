@@ -15,7 +15,7 @@ namespace :db do
                  email: "jjuanchow@gmail.com",
                  password: "juancar1os",
                  password_confirmation: "juancar1os")
-    99.times do |n|
+    10.times do |n|
       first_name = Faker::Name.first_name
       last_name = Faker::Name.last_name
       email = "ejemplo-#{n+1}@muevete.org"
@@ -45,30 +45,24 @@ namespace :db do
     Action.create!(name: "Participaste en el Cicloton", desc: "Bien por andar en bicicleta y cuidar más tu cuerpo. ", points: 30, level: 1, canjeable: true, code: 'AAAA-12345')
     Action.create!(name: "Introduce tu'código de Ecobici", desc: "Ganarás 30 puntos por introducir tu tarjeta de Ecobici.", points: 30, level: 1, canjeable: true, code: 'AAAA-12345')
 
-    10.times do |n|
-      name = Faker::Lorem.sentence(1)
-      desc = Faker::Lorem.sentence(20)
-      points = n + 10
-      level = 1
-      if n >= 5 && n < 10
-        level = 2
-      #elsif n >= 20
-      #  level = 3
-      #else
-      #  level = 1
-      end
-      canj = true
-      code = "AAAA-12345"
-      if n > 5
-        canj = false
-      end
-      Action.create!(name: name,
-                     desc: desc,
-                     points: points,
-                     level: level,
-                     canjeable: canj,
-                     code: code)
-    end
+    Action.create!(name: "Taller de Lindy Hop (Swing)", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Miercoles", horario: "16:00 a 18:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true)
+    Action.create!(name: "Taller de Skate para Chicas", desc: "She is skate", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "15:00 a 17:00", lugar: "Centro Deportivo y Recreativo Tola, Acueducto de Guadalupe esq Axayacatl col. Santa Isabel Tola. Gusvato A. Madero", recurrente: true)
+    Action.create!(name: "Taller de Danza Afrobrasileña", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true)
+    Action.create!(name: "Taller de Danza Afroamericana", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true)
+    Action.create!(name: "Taller de Atletismo y Acondicionamiento Físico", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Sábados y Domingos", horario: "10:00 a 14:00", lugar: "Av. Ing. Eduardo Molina esq. Talismán (camellón)", recurrente: true)
+    Action.create!(name: "Taller de Atletismo ", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Sábados y Domingos", horario: "11:00 a 13:00", lugar: "Parque viveros de Coyoacán (puerta 1)", recurrente: true)
+    Action.create!(name: "Taller de Elasticidad ", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Miercoles y Viernes", horario: "16:00 a 18:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true)
+    Action.create!(name: "Taller de Mi Cuerpo, Mi Sexualidad, Mi Libertad, Mi Responsabilidad", desc: "Aportar las herramientas prácticas en la vida diaria de los participantes respecto a temas de género, sexualidad y diversidad. Se pretende que la persona conozca más sobre sí misma, sobre su cuerpo y su entorno social en función de las necesidades y normas sexuales que le rodean y la toma de decisiones a las que se enfrenta como joven y las decisiones que deberá tomar en tanto ser libre.", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", horario: "17:00 a 19:00", lugar: "Injuve DF, México Tacuba 235, col. Un Hogar para Nosotros, 3er piso", recurrente: true)
+    Action.create!(name: "Taller de Barras Urbanas ", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Miercoles y Sábado", horario: "10:00 a 12:00", lugar: "Deportivo Santa Cruz Meyehualco, Calle 71 esq. Ermita s/n col Santa Cruz Meyehualco, Delegación Iztapalapa", recurrente: true)
+    Action.create!(name: "Taller de Lucha Olímpica ", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Miercoles", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true)
+    Action.create!(name: "Taller de Lucha Judo", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true)
+    Action.create!(name: "Taller de Danza Clásica", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Martes", horario: "14:00 a 16:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true)
+    Action.create!(name: "Taller de Karate", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Miercoles y Viernes", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true)
+    Action.create!(name: "Taller de Hula Hula", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "12:00 a 14:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true)
+
+
+
+
   end
 
   def make_user_actions

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140315001018) do
+ActiveRecord::Schema.define(version: 20140420231033) do
 
   create_table "actions", force: true do |t|
     t.string   "name"
@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(version: 20140315001018) do
     t.integer  "level",      default: 1
     t.boolean  "canjeable",  default: false
     t.string   "code"
+    t.string   "lugar"
+    t.string   "promotor"
+    t.boolean  "recurrente"
+    t.string   "fecha"
+    t.string   "horario"
   end
 
   create_table "badge_relationships", force: true do |t|

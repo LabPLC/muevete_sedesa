@@ -34,11 +34,18 @@ class User < ActiveRecord::Base
 
   def complete_action!(accion)
     if !doing_action?(accion).nil?
-      completada = relationships.find_by(action_id: accion.id)
-      completada.completed = true
-      completada.save
+      if accion.recurrente
+        completada = relationships.find_by(action_id: accion.id)
+        completada.completed = false
+        completada.save
+        add_points(accion)
+      else
+        completada = relationships.find_by(action_id: accion.id)
+        completada.completed = true
+        completada.save
+        add_points(accion)
+      end
 
-      add_points(accion)
     end
   end
 

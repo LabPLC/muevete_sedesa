@@ -4,14 +4,20 @@
     - accion1 = current_user.completed_actions.find { |a| a.action_id == @action.id }
     - if accion1.nil?
       %section
-        = form_tag('/acciones/users') do 
+        = form_tag('/acciones/users') do
           = render 'shared/error_messages', object: @action
+          %h3
+            Esta acción te dará:
+          %p
+            = @action.points
+            Puntos
           - if @action.canjeable
             %h3
               Canjea tu código aquí
             .field
               %input{:name => "code", type: "text"}
-              
+
+
           %input{:name => "id", type: "hidden", value: @action.id}
           = submit_tag "Completar"
   -else

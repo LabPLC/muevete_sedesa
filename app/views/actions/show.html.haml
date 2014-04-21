@@ -15,6 +15,20 @@
           Descripción de la acción
         %p
           = @action.desc
+        %h3
+          ¿En dónde será?
+        %p
+          = @action.lugar
+        %h3
+          ¿Cuando?
+        %p
+          = @action.fecha
+        %p
+          = @action.horario
+        %h3
+          ¿Quién lo propone?
+        %p
+          = @action.promotor
         - if !@action.canjeable && !current_user.nil?
           %h3
             Pasos para completar
