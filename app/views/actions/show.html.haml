@@ -29,10 +29,7 @@
           ¿Quién lo propone?
         %p
           = @action.promotor
-        - if !@action.canjeable && !current_user.nil?
-          %h3
-            Pasos para completar
-          %progress#barbar{value: 30, max: 100}
+
       .col-lg-6
         = render 'shared/action_submit_form', locals: {action: @action}
 
