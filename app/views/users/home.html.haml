@@ -25,7 +25,7 @@
     .row
       .col-lg-2.col-sm-6
         .circle-tile
-          %a{href: '#'}
+          %a{href: todo_user_actions_path}
             .circle-tile-heading.green
               %i.fa.fa-users.fa-fw.fa-3x
           .circle-tile-content.green
@@ -58,7 +58,7 @@
       -# Acciones disponibles
       .col-lg-2.col-sm-6
         .circle-tile
-          %a{href: '#'}
+          %a{href: acciones_path}
             .circle-tile-heading.red
               %i.fa.fa-tasks.fa-fw.fa-3x
           .circle-tile-content.red
@@ -68,14 +68,14 @@
               = Action.count
               acciones
               %span#sparklineA
-            %a.circle-tile-footer{href: '#'}
+            %a.circle-tile-footer{href: acciones_path}
               Ver todas las acciones
               %i.fa.fa-chevron-circle-right
 
       -# Acciones realizadas
       .col-lg-2.col-sm-6
         .circle-tile
-          %a{href: '#'}
+          %a{href: done_user_actions_path}
             .circle-tile-heading.purple
               %i.fa.fa-check.fa-fw.fa-3x
           .circle-tile-content.purple
