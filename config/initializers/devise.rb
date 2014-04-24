@@ -228,16 +228,16 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
-  API_KEYS = YAML::load_file("#{Rails.root}/config/api-keys.yml")[Rails.env]
 
   require "omniauth-facebook"
-  config.omniauth :facebook, API_KEYS['facebook']['api_key'], API_KEYS['facebook']['api_secret'], scope: "email publish_actions"
+  config.omniauth :facebook, Settings.facebook.api_key, Settings.facebook.api_secret, scope: "email publish_actions"
 
   require "omniauth-google-oauth2"
-  config.omniauth :google_oauth2, API_KEYS['google_oauth2']['api_key'], API_KEYS['google_oauth2']['api_secret'], { access_type: "offline", approval_prompt: "" }
+  config.omniauth :google_oauth2, Settings.google_oauth2.api_key, Settings.google_oauth2.api_secret, { access_type: "offline", approval_prompt: "" }
 
   require "omniauth-twitter"
-  config.omniauth :twitter, API_KEYS['twitter']['api_key'], API_KEYS['twitter']['api_secret']
+  config.omniauth :twitter, Settings.twitter.api_key, Settings.twitter.api_secret 
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
