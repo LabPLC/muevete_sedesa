@@ -11,6 +11,10 @@ class Settings
     ALL.keys.include?(m) ? Presenter.new( m, ALL.fetch(m) ) : super
   end
 
+  def self.respond_to?(m)
+    ALL.keys.include?(m) || super
+  end
+
   private
 
   class Presenter
@@ -20,11 +24,15 @@ class Settings
     end
 
     def method_missing(m, *args, &block)
-      if settings.include?(m.to_sym)
+      if settings.include?(m)
         ENV[ [namespace, m].join("_").upcase ]
       else
         super
       end
+    end
+
+    def respond_to?(m)
+      settings.include?(m) || super
     end
 
     private
