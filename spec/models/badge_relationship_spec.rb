@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BadgeRelationships do
+describe BadgeRelationship do
 
   let(:usuario) { FactoryGirl.create(:user) }
   let(:badge) { FactoryGirl.create(:badge) }
