@@ -45,7 +45,6 @@ class User < ActiveRecord::Base
         completada.save
         add_points(accion)
       end
-
     end
   end
 
