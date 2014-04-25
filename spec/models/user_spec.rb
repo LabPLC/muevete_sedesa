@@ -7,9 +7,9 @@ describe User do
     @user = User.new(email: "user@example.com",
                      password: "juancar1os", password_confirmation: "juancar1os")
   end
-  
+
   subject{ @user }
-  
+
   it { should respond_to(:first_name) }
   it { should respond_to(:last_name) }
   it { should respond_to(:email) }
@@ -45,7 +45,7 @@ describe User do
 
   describe "completar accion" do
     let(:accion) { FactoryGirl.create(:action)}
-    
+
     before do
       @user.save!
       @puntos = @user.points

@@ -11,7 +11,7 @@ describe Badge do
   it { should respond_to(:desc) }
   it { should respond_to(:points) }
 
-  it { should respond_to(:user_relationships) }
+  it { should respond_to(:badge_relationships) }
 
 
 end
