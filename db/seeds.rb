@@ -11,13 +11,13 @@ end
 
 # CREATE USERS
 
-User.create({
-  first_name: "Juan Carlos",
-  last_name: "Sanchez",
-  email: "jjuanchow@gmail.com",
-  password: "juancar1os",
-  password_confirmation: "juancar1os"
-})
+#User.create({
+  #first_name: "Juan Carlos",
+  #last_name: "Sanchez",
+  #email: "jjuanchow@gmail.com",
+  #password: "juancar1os",
+  #password_confirmation: "juancar1os"
+#})
 
 10.times do |n|
   password = "password111"
