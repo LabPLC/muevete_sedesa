@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'spork'
+require 'coveralls'
 
 Spork.prefork do
   ENV["RAILS_ENV"] ||= 'test'
@@ -14,6 +15,9 @@ Spork.prefork do
   # Checks for pending migrations before tests are run.
   # If you are not using ActiveRecord, you can remove this line.
   ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
+
+  # Measure code coverage
+  Coveralls.wear!
 
   RSpec.configure do |config|
 
