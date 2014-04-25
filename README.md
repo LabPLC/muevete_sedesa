@@ -1,8 +1,6 @@
 # ¡Cuídate!
 
-[![Build Status](https://img.shields.io/travis/labplc/muevete_sedesa.svg)][travis]
-
-[travis]: http://travis-ci.org/labplc/muevete_sedesa
+[![Build Status](https://travis-ci.org/LabPLC/muevete_sedesa.svg?branch=master)](https://travis-ci.org/LabPLC/muevete_sedesa)
 
 Busca formas de mejorar la calidad de vida y sallud de la ciudadanía mediante gamificación así como mostrar información sobre el estado de salud de la Ciudad de México
 
