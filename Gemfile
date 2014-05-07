@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 
 
-gem 'rails'
+gem 'rails', '~> 4.0.3'
 
 group :development, :test do
-  gem 'sqlite3'
-  gem 'rspec-rails'
+  gem 'sqlite3', '1.3.8'
+  gem 'rspec-rails', '2.13.1'
   gem 'haml-rails'
   gem 'guard-rspec'
-  gem 'spork-rails'
-  gem 'guard-spork'
-  gem 'childprocess'
-  gem "quiet_assets"
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.3.9'
+  gem "quiet_assets", "~> 1.0.2"
   gem "better_errors"
   gem "binding_of_caller"
 end
@@ -32,24 +32,24 @@ gem 'omniauth-twitter'
 gem "koala"
 
 group :test do
-  gem 'selenium-webdriver'
-  gem 'capybara'
-  gem 'libnotify'
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara', '2.1.0'
+  gem 'libnotify', '0.8.0'
   gem 'factory_girl_rails'
   gem 'coveralls', require: false
 end
 
-gem 'sass-rails'
-gem 'uglifier'
-gem 'coffee-rails'
-gem 'jquery-rails'
-gem 'jbuilder'
+gem 'sass-rails', '4.0.0'
+gem 'uglifier', '2.1.1'
+gem 'coffee-rails', '4.0.0'
+gem 'jquery-rails', '3.0.4'
+gem 'jbuilder', '1.0.2'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
 
 group :production do
-  gem 'pg'
-  gem 'rails_12factor'
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
 end
