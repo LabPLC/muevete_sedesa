@@ -301,6 +301,7 @@ DEPENDENCIES
   jquery-slimscroll-rails
   koala
   libnotify (= 0.8.0)
+  nokogiri
   omniauth
   omniauth-facebook
   omniauth-google-oauth2
