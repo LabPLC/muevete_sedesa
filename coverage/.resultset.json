@@ -15,11 +15,11 @@
         null,
         1,
         1,
-        1,
+        5,
         null,
         null,
         1,
-        1,
+        5,
         null,
         null
       ],
@@ -30,8 +30,20 @@
         1,
         1,
         null
+      ],
+      "/home/juancho/code/codigocdmx/muevete_sedesa/app/models/friend_relationship.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1399476921
+    "timestamp": 1399477508
   }
 }

@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
   end
 
   def do_action!(accion)
-    relationships.create!(action_id: accion.id)
+    relationships.create(action_id: accion.id)
   end
 
   def completed_actions
