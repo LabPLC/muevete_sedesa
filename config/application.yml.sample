@@ -1,0 +1,8 @@
+twitter_api_key: "TWITTER API KEY"
+twitter_api_secret: "TWITTER API KEY"
+
+facebook_api_key: "FACEBOOK API KEY"
+facebook_api_secret: "FACEBOOK API KEY"
+
+google_oauth2_api_key: "GOOGLE API KEY"
+google_oauth2_api_secret: "GOOGLE API KEY"
