@@ -20,11 +20,27 @@ bundle install
 
 ## Uso en desarrollo
 
-Únicamente activa el servidor
+Esta aplicación utiliza integración con Facebook, Twitter y Google Plus las cuales se declaran como variables de entorno. Puedes revisar un ejemplo en el archivo **application.yml.sample** para declararlas ya sea estableciendolas en tu archivo **.bashrc** como variables de entorno o utilizando [Figaro](https://github.com/laserlemon/figaro) renombrando ese archivo a **application.yml**
+
+Después realiza las migraciones y activa el servidor
 
 ```
+rake db:migrate
+
 rails server
 ```
+
+## "¿Cuídate?"
+
+¡Cuídate! es una plataforma que busca transformar el cuidar tu salud en un juego. Mediante integración con redes sociales, "Cuídate" te permite conocer los eventos de salud de distintas organizaciones de la Ciudad de México enfocadas en disminuir la obesidad y sobrepeso de la gente.
+
+![Imgur](http://i.imgur.com/IDSopRW.png)
+
+![Imgur](http://i.imgur.com/0sI3esC.png)
+
+![Imgur](http://i.imgur.com/GDHCJXK.png)
+
+![Imgur](http://i.imgur.com/jIrPwkr.png)
 
 ## Contribuye
 
