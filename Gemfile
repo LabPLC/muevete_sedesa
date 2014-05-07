@@ -16,6 +16,7 @@ group :development, :test do
   gem "binding_of_caller"
 end
 
+gem 'nokogiri'
 gem 'haml'
 gem 'devise'
 gem 'faker'

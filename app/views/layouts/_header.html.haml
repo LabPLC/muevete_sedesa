@@ -12,7 +12,10 @@
           %i.fa.fa-bars
     %ul.nav.navbar-right
       %li.active
-        %a{ href: user_home_path} Bienvenido
+        - if user_signed_in?
+          %a{ href: user_home_path} Dashboard
+        - else
+          %a{ href: root_path} ¡Cuídate!
       %li
         %a{ href: static_pages_ayuda_path} Ayuda
       %li
