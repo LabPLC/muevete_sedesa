@@ -23,7 +23,7 @@ describe Settings do
           context "#{namespace}.#{setting}" do
 
             let(:value) { "foo" }
-            let(:key) { [ namespace, setting ].join("_").upcase }
+            let(:key) { [ namespace, setting ].join("_").downcase }
 
             before do
               ENV[key] = value

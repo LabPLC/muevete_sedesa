@@ -12,6 +12,7 @@ class Settings
   end
 
   def self.respond_to?(m)
+
     ALL.keys.include?(m) || super
   end
 
@@ -25,7 +26,7 @@ class Settings
 
     def method_missing(m, *args, &block)
       if settings.include?(m)
-        ENV[ [namespace, m].join("_").upcase ]
+        ENV[ [namespace, m].join("_").downcase ]
       else
         super
       end
