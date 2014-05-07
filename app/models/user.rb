@@ -25,11 +25,11 @@ class User < ActiveRecord::Base
   end
 
   def completed_actions
-    relationships.find_all_by_completed(true)
+    relationships.where(completed: true)
   end
 
   def todo_actions
-    relationships.find_all_by_completed(false)
+    relationships.where(completed: false)
   end
 
   def complete_action!(accion)
