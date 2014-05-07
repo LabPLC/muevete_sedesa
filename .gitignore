@@ -16,3 +16,8 @@
 /tmp
 public/assets/**
 config/api-keys.yml
+
+# Ignore application configuration
+/config/application.yml
+
+coverage
