@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Action do
-  
+
   before do
     @action = Action.new(name: "Action 1", desc: "Lorem ipsum", points: 20)
   end
@@ -15,16 +15,18 @@ describe Action do
 
   it { should respond_to(:relationships)}
 
-  
+
   it { should respond_to(:users) }
 
   it { should respond_to(:code) }
+
+  it { should respond_to(:url)}
 
 
 
   it { should be_valid }
 
-  describe "when is not created with points" do 
+  describe "when is not created with points" do
     before { @action.points = nil}
     it { should_not be_valid}
   end

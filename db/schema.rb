@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140420231033) do
+ActiveRecord::Schema.define(version: 20140506164203) do
 
   create_table "actions", force: true do |t|
     t.string   "name"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20140420231033) do
     t.boolean  "recurrente"
     t.string   "fecha"
     t.string   "horario"
+    t.string   "url"
   end
 
   create_table "badge_relationships", force: true do |t|
