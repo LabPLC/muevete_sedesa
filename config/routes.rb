@@ -1,5 +1,7 @@
 SedesaApp::Application.routes.draw do
 
+  get 'users/first_login', to: 'users#first_login', as: 'first_login'
+
   resources :relationships, only: [:create]
 
   resources :users, only: [:index] do

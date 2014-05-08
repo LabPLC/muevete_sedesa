@@ -5,6 +5,9 @@ class UsersController < ApplicationController
   def index
   end
 
+  def first_login
+  end
+
   def show
   end
 

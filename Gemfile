@@ -5,12 +5,12 @@ gem 'rails', '~> 4.0.3'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
-  gem 'rspec-rails', '2.13.1'
+  gem 'rspec-rails'
   gem 'haml-rails'
   gem 'guard-rspec'
-  gem 'spork-rails', '4.0.0'
-  gem 'guard-spork', '1.5.0'
-  gem 'childprocess', '0.3.9'
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess'
   gem "quiet_assets", "~> 1.0.2"
   gem "better_errors"
   gem "binding_of_caller"
@@ -32,9 +32,9 @@ gem 'omniauth-twitter'
 gem "koala"
 
 group :test do
-  gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '2.1.0'
-  gem 'libnotify', '0.8.0'
+  gem 'selenium-webdriver'
+  gem 'capybara'
+  gem 'libnotify'
   gem 'factory_girl_rails'
   gem 'coveralls', require: false
 end
