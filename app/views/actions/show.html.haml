@@ -1,4 +1,4 @@
-
+#fb-root
 - if user_signed_in?
   = render 'shared/sidebar'
 
@@ -29,6 +29,11 @@
           ¿Quién lo propone?
         %p
           = @action.promotor
+        %h3
+          Comparte esta acción!
+        %p
+          = request.original_url
+          = render 'shared/share_button'
 
       .col-lg-6
         = render 'shared/action_submit_form', locals: {action: @action}
