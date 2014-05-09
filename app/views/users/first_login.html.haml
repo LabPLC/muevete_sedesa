@@ -1,0 +1,34 @@
+#page-wrapper
+  .page-content
+    .row
+      .col-lg-12
+        .page-title
+          %h1
+            Bienvenido a ¡Cuídate!
+
+          %h2
+            Para conocerte mejor, ayudanos contestando unas preguntas respecto a tu salud
+          %p
+            Ésto permitirá personalizar la aplicación para tu mejor uso. No es obligatorio contestar las preguntas
+    .row
+      .col-lg-12
+        %h3
+          ¿Cuál es tu edad?
+        %input{type: "text"}
+        %h3
+          ¿Cuántas horas al día pasas sentado?
+        %input{type: "text"}
+        %h3
+          ¿Alguno de tus familiares padece de diabetes o hipertensión?
+        %select
+          %option{:value => '0'} Sí
+          %option{:value => '1'} No
+          %option{:value => '2'} No se
+    .row
+      .col-lg-12
+        %a.btn.btn-primary.btn-lg{href: user_home_path}
+          Continuar
+          %i.fa.fa-arrow-circle-right
+
+
+
