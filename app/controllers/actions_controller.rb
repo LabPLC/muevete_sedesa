@@ -5,7 +5,7 @@ class ActionsController < ApplicationController
   end
 
   def index
-    @actions = Action.all
+    @actions = Action.all.sample(Action.all.size)
   end
 
   def agregar
