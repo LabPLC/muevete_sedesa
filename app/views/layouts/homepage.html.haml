@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}
+      %meta{:charset => "utf-8"}
+        %title
+          ¡Cuídate!
+        %meta{:content => "Muevete", :name => "gamification"}
+        %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}
+        =stylesheet_link_tag "bootstrap.min", media: "all"
+        =stylesheet_link_tag "font-awesome", media: "all"
+        =stylesheet_link_tag "custom", media: "all"
+
+
+  %body
+    = render 'layouts/headernew'
+    = yield
+    = render 'layouts/footer'

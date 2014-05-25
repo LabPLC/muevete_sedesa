@@ -1,26 +1,242 @@
 - provide(:title, "Inicio")
 
-.container
-  .jumbotron
-    %h1
-      ¡Cuídate!
-    %p
-      es un proyecto del Laboratorio para la Ciudad que busca transformar en un juego cuidar tu salud enfocandote en "acciones saludables".
+.header.vert
+  .container
+    %h1 Cuídate!
+    %p.lead un proyecto del Laboratorio para la Ciudad que busca transformar en un juego cuidar tu salud enfocandote en "acciones saludables".
+    %div &nbsp;
+    %a.btn.btn-default.btn-lg{:href => "#"} Empieza a hacerlo
+    %a.btn.btn-default.btn-lg{:href => "#"} Eventos de salud CDMX
+    %a.btn.btn-default.btn-lg{:href => "#"} ¿Dónde me puedo checar?
+#sec2.featurette
+  .container
+    .row
+      .col-md-12.text-center
+        %h1 ¿Cómo funciona?
+    .row
+      .col-md-2.col-md-offset-2.text-center
+        .featurette-item
+          %i.fa.fa-rocket
+          %h4 Encuentra eventos
+          %p La Ciudad de México siempre tiene Eventos de Salud en los que puedes participar.
+      .col-md-2.text-center
+        .featurette-item
+          %i.fa.fa-magnet
+          %h4 Registrate y Participa
+          %p Puedes agendar y recibir notificaciones sobre éstos eventos.
+      .col-md-2.text-center
+        .featurette-item
+          %i.fa.fa-shield
+          %h4 Asiste y Gana Puntos
+          %p Hacer check-in o canjear códigos te acredita en el evento
+      .col-md-2.text-center
+        .featurette-item
+          %i.fa.fa-pencil
+          %h4 Compite con tus amigos
+          %p Puedes ver los eventos en los que tus amigos han participado.
+#sec3.callout
+  .vert
+    .col-md-12.text-center
+      %h2 Sometimes People Are Cool
+    .col-md-12.text-center &nbsp;
+    .col-md-8.col-md-offset-2.text-center
+      .row.hidden-xs
+        .col-sm-2
+          %img.img-circle.grayscale{:src => "http://www.gravatar.com/avatar/5c708a2c9d25d1f2e4195ece1f1c684d?s=200"}/
+        .col-sm-2
+          %img.img-circle.grayscale{:src => "http://www.gravatar.com/avatar/3bb38f66f79ca138f318af89fe6b02ec?s=200"}/
+        .col-sm-2
+          %img.img-circle.grayscale{:src => "http://www.gravatar.com/avatar/3423a3e32fda92a5aaed72c7cde3849c?s=200"}/
+        .col-sm-2
+          %img.img-circle.grayscale{:src => "http://www.gravatar.com/avatar/325b6c3c0a75bfdb72822035bb556826?s=200"}/
+        .col-sm-2
+          %img.img-circle.grayscale{:src => "http://www.gravatar.com/avatar/cdd69340b0cfac4c7acb892e3ea7556e?s=200"}/
+        .col-sm-2
+          %img.img-circle.grayscale{:src => "http://www.gravatar.com/avatar/889778901fb1522dac2846ffe62bd960?s=200"}/
+#sec4.blurb
+  .container
+    .row
+      .col-md-12.text-center
+        %h1 Is That An iPhone?
+        %img.img-responsive{:src => "/assets/example/bg_smartphones.jpg"}
+%hr
+  .gallery
+    .row
+      .col-md-6.col-md-offset-3.text-center
+        %h5 This Template is Responsive
+        %h2 Features Galore
+        %br
+    .container.well.well-lg
+      .row
+        .col-sm-3
+          .list-group
+            %a.list-group-item{:href => "#"}
+              %span.text-success
+                %i.icon-film
+              Carousel
+        .col-sm-3
+          .list-group
+            %a.list-group-item{:href => "#"}
+              %span.text-success
+                %i.icon-folder-close-alt
+              Tabs
+        .col-sm-3
+          .list-group
+            %a.list-group-item{:href => "#"}
+              %span.text-success
+                %i.icon-credit-card
+              Modal
+        .col-sm-3
+          .list-group
+            %a.list-group-item{:href => "#"}
+              %span.text-success
+                %i.icon-reorder
+              Navigation
+        .col-sm-3
+          .list-group
+            %a.list-group-item{:href => "#"}
+              %span.text-success
+                %i.icon-mobile-phone
+              Mobile-first
+        .col-sm-3
+          .list-group
+            %a.list-group-item{:href => "#"}
+              %span.text-success
+                %i.icon-align-justify
+              Accordion
+        .col-sm-3
+          .list-group
+            %a.list-group-item{:href => "#"}
+              %span.text-success
+                %i.icon-list-alt
+              Panel
+        .col-sm-3
+          .list-group
+            %a.list-group-item{:href => "#"}
+              %span.text-success
+                %i.icon-check
+              Form
+        .col-sm-3
+          .list-group
+            %a.list-group-item{:href => "#"}
+              %span.text-success
+                %i.icon-table
+              Table
+        .col-sm-3
+          .list-group
+            %a.list-group-item{:href => "#"}
+              %span.text-success
+                %i.icon-eye-open
+              Icons
+        .col-sm-3
+          .list-group
+            %a.list-group-item{:href => "#"}
+              %span.text-success
+                %i.icon-th
+              Responsive Grid
+        .col-sm-3
+          .list-group
+            %a.list-group-item{:href => "#"}
+              %span.text-success
+                %i.icon-font
+              Typography
+  .blurb
+    .container
+      .row
+        .col-md-12.text-center
+          %h1 Kickstart Your Web Design
+          = yield
+          %p.lead With this Responsive Bootstrap Template
+  .blurb.bright
+    .row
+      .col-md-6.col-md-offset-3.text-center
+        %h3 Smashing Heading
+        %br
+    .row
+      .col-sm-4.col-sm-offset-2
+        .panel.panel-default
+          .panel-heading.text-center
+            %h2
+              %i.icon-chevron-left
+              Left
+          .panel-body.text-center
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+            Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+            dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+            Aliquam in felis sit amet augue.
+            %hr
+              %button.btn.btn-lg.btn-primary.btn-block Login
+      .col-sm-4
+        .panel.panel-default
+          .panel-heading.text-center
+            %h2
+              Right
+              %i.icon-chevron-right
+          .panel-body.text-center
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+            Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+            dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+            Aliquam in felis sit amet augue.
+            %hr
+              %button.btn.btn-lg.btn-primary.btn-block Sign Up
+  .blurb
+    .container
+      .row
+        .col-md-6.col-md-offset-3.text-center
+          %h2 Sharing the Bootstrap Love
+          %p.lead
+            %a{:href => "http://bootply.com/85657"}
+              %strong Download this Template
+            %br
+              %small
+                %a{:href => "http://bootply.com/templates", :target => "ext"} More Bootstrap Templates
+  %footer
+    .container
+      .row
+        .col-md-6.col-md-offset-3.text-center
+          %ul.list-inline
+            %li
+              %i.fa.fa-facebook.icon.fa-2x
+            %li
+              %i.fa.fa-twitter.icon.fa-2x
+            %li
+              %i.icon-google-plus.icon-2x
+            %li
+              %i.icon-pinterest.icon-2x
+          %hr
+            %p
+              Built with
+              %i.icon-heart-empty
+              at
+              = succeed "." do
+                %a{:href => "http://www.bootply.com"} Bootply
+              %br Company ©2013
+  %ul.nav.pull-right.scroll-down
+    %li
+      %a{:href => "#", :title => "Scroll down"}
+        %i.icon-chevron-down.icon-3x
+  %ul.nav.pull-right.scroll-top
+    %li
+      %a{:href => "#", :title => "Scroll to top"}
+        %i.icon-chevron-up.icon-3x
+  / JavaScript jQuery code from Bootply.com editor
+  :javascript
+    $(document).ready(function() {
 
-    .div
-      %p
-        %a.btn.btn-primary.btn-lg{href: user_home_path}
-          ¡Cuídate!
-          %i.fa.fa-arrow-circle-right
-        %a.btn.btn-info.btn-lg{href: static_pages_info_path}
-          Información
-          %i.fa.fa-question-circle
-        %a.btn.btn-danger.btn-lg{href: acciones_path}
-          Eventos de salud
-          %i.fa.fa-calendar-o
-        %a.btn.btn-success.btn-lg{href: "http://checate-aqui.herokuapp.com"}
-          ¿Dónde checarme?
-          %i.fa.fa-check
+        /* smooth scrolling for scroll to top */
+    $('.scroll-top').click(function(){
+    $('body,html').animate({scrollTop:0},1000);
+    })
+    /* smooth scrolling for scroll down */
+    $('.scroll-down').click(function(){
+      $('body,html').animate({scrollTop:$(window).scrollTop()+800},1000);
+    })
+
+    /* highlight the top nav as scrolling occurs */
+    $('body').scrollspy({ target: '#navbar' })
+
+
+            });
 
 
 
