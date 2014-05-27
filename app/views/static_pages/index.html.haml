@@ -5,10 +5,12 @@
     %h1 Cuídate!
     %p.lead un proyecto del Laboratorio para la Ciudad que busca transformar en un juego cuidar tu salud enfocandote en "acciones saludables".
     %div &nbsp;
-    %a.btn.btn-default.btn-lg{:href => "#"} Empieza a hacerlo
+    %a.btn.btn-default.btn-lg{:href => user_home_path} Empieza a hacerlo
+    %div &nbsp;
     %a.btn.btn-default.btn-lg{:href => "#"} Eventos de salud CDMX
+    %div &nbsp;
     %a.btn.btn-default.btn-lg{:href => "#"} ¿Dónde me puedo checar?
-#sec2.featurette
+#sec1.featurette
   .container
     .row
       .col-md-12.text-center
@@ -34,7 +36,7 @@
           %i.fa.fa-pencil
           %h4 Compite con tus amigos
           %p Puedes ver los eventos en los que tus amigos han participado.
-#sec3.callout
+#sec2.callout
   .vert
     .col-md-12.text-center
       %h2 Sometimes People Are Cool
@@ -53,7 +55,7 @@
           %img.img-circle.grayscale{:src => "http://www.gravatar.com/avatar/cdd69340b0cfac4c7acb892e3ea7556e?s=200"}/
         .col-sm-2
           %img.img-circle.grayscale{:src => "http://www.gravatar.com/avatar/889778901fb1522dac2846ffe62bd960?s=200"}/
-#sec4.blurb
+#sec3.blurb
   .container
     .row
       .col-md-12.text-center
@@ -157,7 +159,7 @@
         .panel.panel-default
           .panel-heading.text-center
             %h2
-              %i.icon-chevron-left
+              %i.fa.fa-chevron-left
               Left
           .panel-body.text-center
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
@@ -171,7 +173,7 @@
           .panel-heading.text-center
             %h2
               Right
-              %i.icon-chevron-right
+              %i.fa.fa-chevron-right
           .panel-body.text-center
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
             Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
@@ -214,11 +216,11 @@
   %ul.nav.pull-right.scroll-down
     %li
       %a{:href => "#", :title => "Scroll down"}
-        %i.icon-chevron-down.icon-3x
+        %i.fa.fa-chevron-down.fa-3x
   %ul.nav.pull-right.scroll-top
     %li
       %a{:href => "#", :title => "Scroll to top"}
-        %i.icon-chevron-up.icon-3x
+        %i.fa.fa-chevron-up.fa-3x
   / JavaScript jQuery code from Bootply.com editor
   :javascript
     $(document).ready(function() {
@@ -229,14 +231,11 @@
     })
     /* smooth scrolling for scroll down */
     $('.scroll-down').click(function(){
-      $('body,html').animate({scrollTop:$(window).scrollTop()+800},1000);
+      $('body,html').animate({scrollTop:$(window).scrollTop()+200},1000);
     })
 
     /* highlight the top nav as scrolling occurs */
-    $('body').scrollspy({ target: '#navbar' })
-
-
-            });
+    /*$('body').scrollspy({ target: '#navbar' })  });*/
 
 
 
