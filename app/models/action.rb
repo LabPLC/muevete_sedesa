@@ -9,6 +9,9 @@ class Action < ActiveRecord::Base
 
   before_validation :check_code
 
+  rails_admin do
+  end
+
   private
     def code_valid?
       !code.nil? if canjeable

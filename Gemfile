@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-gem 'rails', '~> 4.0.3'
+gem 'rails', '~> 4.0.4'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
@@ -15,6 +15,10 @@ group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
 end
+
+gem "cancan"
+gem 'rails_admin'
+
 
 gem 'nokogiri'
 gem 'haml'
@@ -39,7 +43,7 @@ group :test do
   gem 'coveralls', require: false
 end
 
-gem 'sass-rails', '4.0.0'
+gem "sass-rails",'~> 4.0.3'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.0'
 gem 'jquery-rails', '3.0.4'

@@ -1,5 +1,6 @@
 SedesaApp::Application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'users/first_login', to: 'users#first_login', as: 'first_login'
 
   resources :relationships, only: [:create]
