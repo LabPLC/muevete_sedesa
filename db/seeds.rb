@@ -35,55 +35,55 @@ end
 
 # CREATE ACTIONS
 
-Action.create(name: "Accion Saludable 1", desc: "Esta es una accion saludable que puedes checar blablablab", points: 20, level: 1)
+Accion.create(name: "Accion Saludable 1", desc: "Esta es una accion saludable que puedes checar blablablab", points: 20, level: 1)
 
-Action.create(name: "Campaña de vacunación 1", desc: "Qué bueno que estas consciente de tu salud. Invierno es una época del año en donde la población se encuentra más propensa a enfermedades. Estamos seguros que con ésta vacuna, estarás más lejos de estar enfermo :)", points: 20, level: 1, canjeable: true, code: "AAAA-12345")
+Accion.create(name: "Campaña de vacunación 1", desc: "Qué bueno que estas consciente de tu salud. Invierno es una época del año en donde la población se encuentra más propensa a enfermedades. Estamos seguros que con ésta vacuna, estarás más lejos de estar enfermo :)", points: 20, level: 1, canjeable: true, code: "AAAA-12345")
 
-Action.create(name: "Campaña de vacunación 2", desc: "Con la Influenza AH1N1 no se juega. Qué bueno que estas consciente de tu salud. Invierno es una época del año en donde la población se encuentra más propensa a enfermedades. Estamos seguros que con ésta vacuna, estarás más lejos de estar enfermo :)", points: 20, level: 1, code: "AAAA-12345")
+Accion.create(name: "Campaña de vacunación 2", desc: "Con la Influenza AH1N1 no se juega. Qué bueno que estas consciente de tu salud. Invierno es una época del año en donde la población se encuentra más propensa a enfermedades. Estamos seguros que con ésta vacuna, estarás más lejos de estar enfermo :)", points: 20, level: 1, code: "AAAA-12345")
 
-Action.create(name: "Cuídate por tu salud", desc: "Fomenta la práctica de la actividad física y contribuye al tratamiento dietetico como usuario de los servicios de salud", points: 10, level: 1)
+Accion.create(name: "Cuídate por tu salud", desc: "Fomenta la práctica de la actividad física y contribuye al tratamiento dietetico como usuario de los servicios de salud", points: 10, level: 1)
 
-Action.create(name: "¿Para qué moverme?", desc: "Te permite desestresarte y darte un tiempo para mejorar la circulación sanguinea.", points: 10, level: 1)
+Accion.create(name: "¿Para qué moverme?", desc: "Te permite desestresarte y darte un tiempo para mejorar la circulación sanguinea.", points: 10, level: 1)
 
-Action.create(name: "Participaste en el Cicloton", desc: "Bien por andar en bicicleta y cuidar más tu cuerpo.", points: 30, level: 1, canjeable: true, code: "AAAA-12345")
+Accion.create(name: "Participaste en el Cicloton", desc: "Bien por andar en bicicleta y cuidar más tu cuerpo.", points: 30, level: 1, canjeable: true, code: "AAAA-12345")
 
-Action.create(name: "Introduce tu'código de Ecobici", desc: "Ganarás 30 puntos por introducir tu tarjeta de Ecobici.", points: 30, level: 1, canjeable: true, code: 'AAAA-12345')
-
-
-Action.create(name: "Taller de Lindy Hop (Swing)", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Miercoles", horario: "16:00 a 18:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/76026393609/lindy-hop-sub-deportivo-lunes-y-miercoles")
+Accion.create(name: "Introduce tu'código de Ecobici", desc: "Ganarás 30 puntos por introducir tu tarjeta de Ecobici.", points: 30, level: 1, canjeable: true, code: 'AAAA-12345')
 
 
-Action.create(name: "Taller de Skate para Chicas", desc: "She is skate", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "15:00 a 17:00", lugar: "Centro Deportivo y Recreativo Tola, Acueducto de Guadalupe esq Axayacatl col. Santa Isabel Tola. Gusvato A. Madero", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/77384500345/skate-para-chicas-si-estamos-en-el-centro")
+Accion.create(name: "Taller de Lindy Hop (Swing)", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Miercoles", horario: "16:00 a 18:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/76026393609/lindy-hop-sub-deportivo-lunes-y-miercoles")
 
-Action.create(name: "Taller de Danza Afrobrasileña", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true)
 
-Action.create(name: "Taller de Danza Afroamericana", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/76362322670/danza-afrobrasilena-sub-deportivo-martes-y")
+Accion.create(name: "Taller de Skate para Chicas", desc: "She is skate", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "15:00 a 17:00", lugar: "Centro Deportivo y Recreativo Tola, Acueducto de Guadalupe esq Axayacatl col. Santa Isabel Tola. Gusvato A. Madero", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/77384500345/skate-para-chicas-si-estamos-en-el-centro")
 
-Action.create(name: "Taller de Atletismo y Acondicionamiento Físico", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Sábados y Domingos", horario: "10:00 a 14:00", lugar: "Av. Ing. Eduardo Molina esq. Talismán (camellón)", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/77385007195/inscribete-ya-taller-de-acondicionamiento-fisico")
+Accion.create(name: "Taller de Danza Afrobrasileña", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true)
 
-Action.create(name: "Taller de Atletismo ", desc: "¿Vives en Coyoacán? Ven los sábados y domingos a correr con nosotros, tenemos taller de ATLETISMO en Viveros", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Sábados y Domingos", horario: "11:00 a 13:00", lugar: "Parque viveros de Coyoacán (puerta 1)", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/77384691168/vives-en-coyoacan-ven-los-sabados-y-domingos-a")
+Accion.create(name: "Taller de Danza Afroamericana", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/76362322670/danza-afrobrasilena-sub-deportivo-martes-y")
 
-Action.create(name: "Taller de Elasticidad ", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Miercoles y Viernes", horario: "16:00 a 18:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true)
+Accion.create(name: "Taller de Atletismo y Acondicionamiento Físico", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Sábados y Domingos", horario: "10:00 a 14:00", lugar: "Av. Ing. Eduardo Molina esq. Talismán (camellón)", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/77385007195/inscribete-ya-taller-de-acondicionamiento-fisico")
 
-Action.create(name: "Taller de Mi Cuerpo, Mi Sexualidad, Mi Libertad, Mi Responsabilidad", desc: "Aportar las herramientas prácticas en la vida diaria de los participantes respecto a temas de género, sexualidad y diversidad. Se pretende que la persona conozca más sobre sí misma, sobre su cuerpo y su entorno social en función de las necesidades y normas sexuales que le rodean y la toma de decisiones a las que se enfrenta como joven y las decisiones que deberá tomar en tanto ser libre.", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", horario: "17:00 a 19:00", lugar: "Injuve DF, México Tacuba 235, col. Un Hogar para Nosotros, 3er piso", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/80216680497/mi-cuerpo-mi-sexualidad-mi-libertad-mi")
+Accion.create(name: "Taller de Atletismo ", desc: "¿Vives en Coyoacán? Ven los sábados y domingos a correr con nosotros, tenemos taller de ATLETISMO en Viveros", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Sábados y Domingos", horario: "11:00 a 13:00", lugar: "Parque viveros de Coyoacán (puerta 1)", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/77384691168/vives-en-coyoacan-ven-los-sabados-y-domingos-a")
 
-Action.create(name: "Taller de Barras Urbanas ", desc: "¿Vives en Álvaro Obregón? Ya puedes inscribirte a nuestro taller de Barras Urbanas.", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Miercoles y Sábado", horario: "10:00 a 12:00", lugar: "Deportivo Santa Cruz Meyehualco, Calle 71 esq. Ermita s/n col Santa Cruz Meyehualco, Delegación Iztapalapa", recurrente: true)
+Accion.create(name: "Taller de Elasticidad ", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Miercoles y Viernes", horario: "16:00 a 18:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true)
 
-Action.create(name: "Taller de Lucha Olímpica ", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Miercoles", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/81433951305/barras-urbanas-miercoles-y-sabado-10-00-a-12-00")
+Accion.create(name: "Taller de Mi Cuerpo, Mi Sexualidad, Mi Libertad, Mi Responsabilidad", desc: "Aportar las herramientas prácticas en la vida diaria de los participantes respecto a temas de género, sexualidad y diversidad. Se pretende que la persona conozca más sobre sí misma, sobre su cuerpo y su entorno social en función de las necesidades y normas sexuales que le rodean y la toma de decisiones a las que se enfrenta como joven y las decisiones que deberá tomar en tanto ser libre.", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", horario: "17:00 a 19:00", lugar: "Injuve DF, México Tacuba 235, col. Un Hogar para Nosotros, 3er piso", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/80216680497/mi-cuerpo-mi-sexualidad-mi-libertad-mi")
 
-Action.create(name: "Taller de Danza Butoh", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Miercoles", horario: "12:00 a 14:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/78071648499")
+Accion.create(name: "Taller de Barras Urbanas ", desc: "¿Vives en Álvaro Obregón? Ya puedes inscribirte a nuestro taller de Barras Urbanas.", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Miercoles y Sábado", horario: "10:00 a 12:00", lugar: "Deportivo Santa Cruz Meyehualco, Calle 71 esq. Ermita s/n col Santa Cruz Meyehualco, Delegación Iztapalapa", recurrente: true)
 
-Action.create(name: "Taller de Lucha Judo", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/78522103985/judo")
+Accion.create(name: "Taller de Lucha Olímpica ", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Miercoles", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/81433951305/barras-urbanas-miercoles-y-sabado-10-00-a-12-00")
 
-Action.create(name: "Taller de Danza Clásica", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Martes", horario: "14:00 a 16:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/78586446210/danza-clasica")
+Accion.create(name: "Taller de Danza Butoh", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Miercoles", horario: "12:00 a 14:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/78071648499")
 
-Action.create(name: "Taller de Karate", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Miercoles y Viernes", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/78521679081/karate")
+Accion.create(name: "Taller de Lucha Judo", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/78522103985/judo")
 
-Action.create(name: "Taller de Hula Hula", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "12:00 a 14:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/78071362778/hula-hula")
+Accion.create(name: "Taller de Danza Clásica", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Martes", horario: "14:00 a 16:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/78586446210/danza-clasica")
 
-Action.create(name: "Taller de Tai Chi", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Miercoles", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/78071058326/tai-chi")
+Accion.create(name: "Taller de Karate", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Miercoles y Viernes", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/78521679081/karate")
 
-Action.create(name: "Taller de Kick Boxing", desc: "Kick Boxking para todos!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Miercoles", horario: "12:00 a 14:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/76362534803/kick-boxing-sub-deportivo-lunes-y-miercoles" )
+Accion.create(name: "Taller de Hula Hula", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Martes y Jueves", horario: "12:00 a 14:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/78071362778/hula-hula")
+
+Accion.create(name: "Taller de Tai Chi", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Miercoles", horario: "10:00 a 12:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/78071058326/tai-chi")
+
+Accion.create(name: "Taller de Kick Boxing", desc: "Kick Boxking para todos!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Miercoles", horario: "12:00 a 14:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/76362534803/kick-boxing-sub-deportivo-lunes-y-miercoles" )
 
 
 
@@ -96,7 +96,7 @@ def get_urls(events_url, dates)
   html = Nokogiri::HTML(json["html"])
   html.remove_namespaces!
   html.css('a.url').each do |node|
-    accion_saludable = Action.new()
+    accion_saludable = Accion.new()
     get_event node["href"], accion_saludable
     accion_saludable.url = node['href']
     accion_saludable.code = "AAAA-BBBB"
@@ -130,14 +130,14 @@ def get_event(url, accion_saludable)
 end
 
 eventos = 'http://indeporte.mx/wp-admin/admin-ajax.php'
-dates = "2014-05"
+dates = "2014-06"
 get_urls(eventos,dates)
 
 # SET USER ASSOCIATIONS
 
 User.first.tap do |user|
 
-  Action.all.sample(3).each do |action|
+  Accion.all.sample(3).each do |action|
     user.do_action!(action)
   end
 
