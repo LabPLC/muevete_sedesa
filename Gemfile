@@ -41,6 +41,7 @@ group :test do
   gem 'libnotify'
   gem 'factory_girl_rails'
   gem 'coveralls', require: false
+  gem 'rspec-its'
 end
 
 gem "sass-rails",'~> 4.0.3'

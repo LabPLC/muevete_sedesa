@@ -8,27 +8,27 @@
       .col-lg-12
         .page-title
           %h1
-            =@action.name
+            =@accion.name
     .row
       .col-lg-6
         %h3
           Descripción de la acción
         %p
-          = @action.desc
+          = @accion.desc
         %h3
           ¿En dónde será?
         %p
-          = @action.lugar
+          = @accion.lugar
         %h3
           ¿Cuando?
         %p
-          = @action.fecha
+          = @accion.fecha
         %p
-          = @action.horario
+          = @accion.horario
         %h3
           ¿Quién lo propone?
         %p
-          = @action.promotor
+          = @accion.promotor
         %h3
           Comparte esta acción!
         %p
@@ -36,7 +36,7 @@
           = render 'shared/share_button'
 
       .col-lg-6
-        = render 'shared/action_submit_form', locals: {action: @action}
+        = render 'shared/action_submit_form', locals: {action: @accion}
 
-  =debug(@action) if Rails.env.development?
+  =debug(@accion) if Rails.env.development?
 

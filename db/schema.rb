@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140506164203) do
 
-  create_table "actions", force: true do |t|
+  create_table "acciones", force: true do |t|
     t.string   "name"
     t.text     "desc"
     t.integer  "points"
@@ -62,14 +62,14 @@ ActiveRecord::Schema.define(version: 20140506164203) do
 
   create_table "relationships", force: true do |t|
     t.integer  "user_id"
-    t.integer  "action_id"
+    t.integer  "accion_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "completed",  default: false
   end
 
-  add_index "relationships", ["action_id"], name: "index_relationships_on_action_id"
-  add_index "relationships", ["user_id", "action_id"], name: "index_relationships_on_user_id_and_action_id", unique: true
+  add_index "relationships", ["accion_id"], name: "index_relationships_on_accion_id"
+  add_index "relationships", ["user_id", "accion_id"], name: "index_relationships_on_user_id_and_accion_id", unique: true
   add_index "relationships", ["user_id"], name: "index_relationships_on_user_id"
 
   create_table "users", force: true do |t|

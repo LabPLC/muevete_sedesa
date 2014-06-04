@@ -9,7 +9,7 @@ FactoryGirl.define do
     password_confirmation { "juancar1os"}
   end
 
-  factory :action do
+  factory :accion do
     name      "accion1"
     desc      "descripcion"
     points    10

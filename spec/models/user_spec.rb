@@ -16,7 +16,7 @@ describe User do
   it { should respond_to(:password)}
 
   it { should respond_to(:relationships)}
-  it { should respond_to(:followed_actions)}
+  it { should respond_to(:followed_acciones)}
   it { should respond_to(:doing_action?)}
   it { should respond_to(:do_action! )}
 
@@ -33,18 +33,18 @@ describe User do
   it { should respond_to(:followers) }
 
   describe "seguir accion" do
-    let(:accion) { FactoryGirl.create(:action) }
+    let(:accion) { FactoryGirl.create(:accion) }
     before do
       @user.save!
       @user.do_action!(accion)
     end
 
     it { should be_doing_action(accion)}
-    its(:followed_actions) { should include(accion)}
+    its(:followed_acciones) { should include(accion)}
   end
 
   describe "completar accion" do
-    let(:accion) { FactoryGirl.create(:action)}
+    let(:accion) { FactoryGirl.create(:accion)}
 
     before do
       @user.save!
@@ -54,7 +54,7 @@ describe User do
 
     end
 
-    its(:followed_actions) { should include(accion)}
+    its(:followed_acciones) { should include(accion)}
     its(:todo_actions) { should_not include(accion)}
 
     describe "agregar puntos" do

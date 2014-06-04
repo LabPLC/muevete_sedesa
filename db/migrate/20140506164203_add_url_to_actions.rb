@@ -1,5 +1,5 @@
 class AddUrlToActions < ActiveRecord::Migration
   def change
-    add_column :actions, :url, :string
+    add_column :acciones, :url, :string
   end
 end

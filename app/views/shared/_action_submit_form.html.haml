@@ -1,23 +1,23 @@
 - if !current_user.nil?
-  - accion = current_user.relationships.find_by(action_id: @action.id)
+  - accion = current_user.relationships.find_by(accion_id: @accion.id)
 
-  - accion_completada = current_user.completed_actions.find { |a| a.action_id == @action.id }
-  -accion_todo = current_user.todo_actions.find { |a| a.action_id == @action.id }
+  - accion_completada = current_user.completed_actions.find { |a| a.accion_id == @accion.id }
+  -accion_todo = current_user.todo_actions.find { |a| a.accion_id == @accion.id }
   %section
     = form_tag('/acciones/users') do
-      = render 'shared/error_messages', object: @action
+      = render 'shared/error_messages', object: @accion
       %h3
         Esta acción te dará:
       %p
-        = @action.points
+        = @accion.points
         Puntos
-      - if @action.canjeable
+      - if @accion.canjeable
         - if accion_completada.nil?
           %h3
             Canjea tu código aquí
           .field
             %input{:name => "code", type: "text"}
-      %input{:name => "id", type: "hidden", value: @action.id}
+      %input{:name => "id", type: "hidden", value: @accion.id}
       - if accion_completada.nil? && accion_todo.nil?
         = submit_tag "Agregar a mis acciones"
       - else

@@ -1,5 +1,5 @@
 class AddCodeToActions < ActiveRecord::Migration
   def change
-    add_column :actions, :code, :string
+    add_column :acciones, :code, :string
   end
 end

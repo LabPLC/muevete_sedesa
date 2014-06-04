@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ActionsController do
+describe AccionesController do
 
   describe "GET 'show'" do
     it "returns http success" do
