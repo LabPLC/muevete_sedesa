@@ -48,6 +48,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def is_admin?
+    admin
+  end
+
 
   def following?(other_user)
     friend_relationships.find_by(followed_id: other_user.id)

@@ -31,6 +31,8 @@ describe User do
   it { should respond_to(:follow!) }
   it { should respond_to(:reverse_friend_relationships) }
   it { should respond_to(:followers) }
+  it { should respond_to(:admin) }
+  it { should respond_to(:is_admin?) }
 
   describe "seguir accion" do
     let(:accion) { FactoryGirl.create(:accion) }
