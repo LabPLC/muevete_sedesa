@@ -1,5 +1,6 @@
 SedesaApp::Application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'users/first_login', to: 'users#first_login', as: 'first_login'
 
   resources :relationships, only: [:create]
@@ -9,15 +10,15 @@ SedesaApp::Application.routes.draw do
   end
 
   resources :friend_relationships, only: [:create, :destroy]
-  post "acciones/users", to: 'actions#agregar', as: 'add_accion_user'
-  get "acciones", to: 'actions#index', as: 'acciones'
-  get "acciones/users", to: 'actions#user', as: 'accion_user'
-  get "acciones/:id", to: 'actions#show', as: 'accion'
+  post "acciones/users", to: 'acciones#agregar', as: 'add_accion_user'
+  get "acciones", to: 'acciones#index', as: 'acciones'
+  get "acciones/users", to: 'acciones#user', as: 'accion_user'
+  get "acciones/:id", to: 'acciones#show', as: 'accion'
   get "/perfil/:id", to: 'users#show', as: 'user_show'
   get "/users", to: 'users#index'
   get "/userhome", to: 'users#home', as: 'user_home'
-  get "/userhome/todo", to: 'users#todo_actions', as: 'todo_user_actions'
-  get "/userhome/done", to: 'users#done_actions', as: 'done_user_actions'
+  get "/userhome/todo", to: 'users#todo_acciones', as: 'todo_user_acciones'
+  get "/userhome/done", to: 'users#done_acciones', as: 'done_user_acciones'
   devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks', registrations: "users/sessions"}
   #get "static_pages/index"
   get "static_pages/ayuda"
@@ -36,7 +37,7 @@ SedesaApp::Application.routes.draw do
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
+  # Example resource route (maps HTTP verbs to controller acciones automatically):
   #   resources :products
 
   # Example resource route with options:

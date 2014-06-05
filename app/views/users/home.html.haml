@@ -25,7 +25,7 @@
     .row
       .col-lg-2.col-sm-6
         .circle-tile
-          %a{href: todo_user_actions_path}
+          %a{href: todo_user_acciones_path}
             .circle-tile-heading.green
               %i.fa.fa-users.fa-fw.fa-3x
           .circle-tile-content.green
@@ -34,7 +34,7 @@
             .circle-tile-number.text-faded
               = current_user.todo_actions.count
               %span#sparklineA
-            %a.circle-tile-footer{href: todo_user_actions_path}
+            %a.circle-tile-footer{href: todo_user_acciones_path}
               Más información
               %i.fa.fa-chevron-circle-right
 
@@ -65,7 +65,7 @@
             .circle-tile-description.text-faded
               Acciones Disponibles
             .circle-tile-number.text-faded
-              = Action.count
+              = Accion.count
               acciones
               %span#sparklineA
             %a.circle-tile-footer{href: acciones_path}
@@ -75,7 +75,7 @@
       -# Acciones realizadas
       .col-lg-2.col-sm-6
         .circle-tile
-          %a{href: done_user_actions_path}
+          %a{href: done_user_acciones_path}
             .circle-tile-heading.purple
               %i.fa.fa-check.fa-fw.fa-3x
           .circle-tile-content.purple
@@ -85,7 +85,7 @@
               = current_user.completed_actions.count
               acciones
               %span#sparklineA
-            %a.circle-tile-footer{href: done_user_actions_path}
+            %a.circle-tile-footer{href: done_user_acciones_path}
               Historial
               %i.fa.fa-chevron-circle-right
       .col-lg-2.col-sm-6

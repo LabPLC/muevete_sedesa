@@ -1,17 +1,24 @@
-class Action < ActiveRecord::Base
+class Accion< ActiveRecord::Base
   validates :points, presence: true
 
-  has_many :relationships, foreign_key: "action_id", dependent: :destroy
+  has_many :relationships, foreign_key: "accion_id", dependent: :destroy
   has_many :users, through: :relationships, source: :user
 
   validates :code, :presence => true,
-                   :if       => :code_valid?
+                   :if       => :codigo_valido?
 
-  before_validation :check_code
+  #before_ :check_code
+
+  rails_admin do
+  end
 
   private
     def code_valid?
       !code.nil? if canjeable
+    end
+
+    def codigo_valido?
+      canjeable == true
     end
 
     def check_code

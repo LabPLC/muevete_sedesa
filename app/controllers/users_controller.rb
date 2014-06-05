@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   def home
     # @acciones = Action.all
-    @acciones = Action.all.sample(3)
+    @acciones = Accion.all.sample(3)
   end
 
   def todo_actions

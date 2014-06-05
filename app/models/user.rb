@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   has_many :relationships, foreign_key: "user_id", dependent: :destroy
-  has_many :followed_actions, through: :relationships, source: :action
+  has_many :followed_acciones, through: :relationships, source: :accion
   has_many :friend_relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :followed_users, through: :friend_relationships, source: :followed
   has_many :reverse_friend_relationships, foreign_key: "followed_id",
@@ -17,11 +17,11 @@ class User < ActiveRecord::Base
   before_update :check_points
 
   def doing_action?(accion)
-    relationships.find_by(action_id: accion.id)
+    relationships.find_by(accion_id: accion.id)
   end
 
   def do_action!(accion)
-    relationships.create(action_id: accion.id)
+    relationships.create(accion_id: accion.id)
   end
 
   def completed_actions
@@ -35,17 +35,21 @@ class User < ActiveRecord::Base
   def complete_action!(accion)
     if !doing_action?(accion).nil?
       if accion.recurrente
-        completada = relationships.find_by(action_id: accion.id)
+        completada = relationships.find_by(accion_id: accion.id)
         completada.completed = false
         completada.save
         add_points(accion)
       else
-        completada = relationships.find_by(action_id: accion.id)
+        completada = relationships.find_by(accion_id: accion.id)
         completada.completed = true
         completada.save
         add_points(accion)
       end
     end
+  end
+
+  def is_admin?
+    admin
   end
 
 

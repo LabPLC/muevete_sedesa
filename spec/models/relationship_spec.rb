@@ -1,21 +1,21 @@
 require 'spec_helper'
 
 describe Relationship do
-  
-  let(:usuario) { FactoryGirl.create(:user) }
-  let(:accion) { FactoryGirl.create(:action)}
 
-  let(:relationship) {usuario.relationships.build(action_id: accion.id)}
+  let(:usuario) { FactoryGirl.create(:user) }
+  let(:accion) { FactoryGirl.create(:accion)}
+
+  let(:relationship) {usuario.relationships.build(accion_id: accion.id)}
 
   subject { relationship }
 
   it { should be_valid }
 
-  describe "action methods" do
+  describe "accion methods" do
     it { should respond_to(:user) }
-    it { should respond_to(:action) }
+    it { should respond_to(:accion) }
     its(:user) { should eq usuario }
-    its(:action) { should eq accion }
+    its(:accion) { should eq accion }
   end
 
   describe "cuando no hay id de usuario" do
@@ -24,7 +24,7 @@ describe Relationship do
   end
 
   describe "cuando no hay id de accion" do
-    before { relationship.action_id = nil }
+    before { relationship.accion_id = nil }
     it { should_not be_valid }
   end
 

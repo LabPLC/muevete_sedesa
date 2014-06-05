@@ -1,21 +1,21 @@
-class ActionsController < ApplicationController
+class AccionesController < ApplicationController
   def show
-    @action = Action.find(params[:id])
+    @accion = Accion.find(params[:id])
 
   end
 
   def index
-    @actions = Action.all.sample(Action.all.size)
+    @acciones = Accion.all.sample(Accion.all.size)
   end
 
   def agregar
-    @action = Action.find(params[:id])
+    @accion = Accion.find(params[:id])
     if !current_user.nil?
       puts params
-      current = current_user.todo_actions.find{|r| r.action_id == @action.id}
+      current = current_user.todo_actions.find{|r| r.accion_id == @accion.id}
       if !current.nil?
         puts "LALALALALA"
-        curr_action = Action.find_by(id: current.action_id)
+        curr_action = Accion.find_by(id: current.accion_id)
         current_user.complete_action!(curr_action)
 
         ### Temporal para mostrar una badge
@@ -28,7 +28,7 @@ class ActionsController < ApplicationController
         flash[:success] = "Tarea completada"
 
       else
-        current_user.do_action!(@action)
+        current_user.do_action!(@accion)
         flash[:notice] = "Tarea pendiente!"
       end
 
