@@ -16,18 +16,18 @@ describe "Static Pages" do
 
     it "should have the content 'Iniciar sesión'" do
       visit '/'
-      expect(page).to have_content('Iniciar sesión')
+      expect(page).to have_content('Iniciar Sesión')
     end
 
     it "should have the content 'Información'" do
       visit '/'
-      expect(page).to have_content('Información')
+      expect(page).to have_content('Empieza')
     end
 
 
     it "should have the title 'Inicio'" do
       visit '/'
-      expect(page).to have_title("Inicio")
+      expect(page).to have_title("¡Cuídate!")
     end
 
   end
