@@ -1,3 +1,24 @@
+# == Schema Information
+#
+# Table name: acciones
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)
+#  desc       :text
+#  points     :integer
+#  created_at :datetime
+#  updated_at :datetime
+#  level      :integer          default(1)
+#  canjeable  :boolean          default(FALSE)
+#  code       :string(255)
+#  lugar      :string(255)
+#  promotor   :string(255)
+#  recurrente :boolean
+#  fecha      :string(255)
+#  horario    :string(255)
+#  url        :string(255)
+#
+
 require 'spec_helper'
 
 describe Accion do

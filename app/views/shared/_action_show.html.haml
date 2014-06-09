@@ -16,9 +16,12 @@
         %p
           = accion.desc
       .portlet-footer
-        Esta acción vale:
-        = accion.points
-        puntos //
-        Promotor:
-        =accion.promotor
+        .bottom-container
+          .participa-container
+            %a.btn.btn-xs.btn-purple{href: accion_path(accion)}
+              Participa
+          .puntos-container
+            =accion.points
+            puntos
+
 
