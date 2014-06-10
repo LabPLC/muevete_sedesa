@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605160019) do
+ActiveRecord::Schema.define(version: 20140610002450) do
 
   create_table "acciones", force: true do |t|
     t.string   "name"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20140605160019) do
     t.integer  "points"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "level",      default: 1
-    t.boolean  "canjeable",  default: false
+    t.integer  "level",        default: 1
+    t.boolean  "canjeable",    default: false
     t.string   "code"
     t.string   "lugar"
     t.string   "promotor"
@@ -28,6 +28,10 @@ ActiveRecord::Schema.define(version: 20140605160019) do
     t.string   "fecha"
     t.string   "horario"
     t.string   "url"
+    t.date     "fecha_inicio"
+    t.date     "fecha_fin"
+    t.time     "hora_inicio"
+    t.time     "hora_fin"
   end
 
   create_table "badge_relationships", force: true do |t|

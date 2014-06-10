@@ -95,17 +95,33 @@ def get_urls(events_url, dates)
   json = JSON.parse(request.body)
   html = Nokogiri::HTML(json["html"])
   html.remove_namespaces!
-  html.css('a.url').each do |node|
+  html.css('div.hentry').each do |node|
     accion_saludable = Accion.new()
-    get_event node["href"], accion_saludable
+    get_event node.css('a.url').attr('href').value, accion_saludable
     accion_saludable.url = node['href']
     accion_saludable.code = "AAAA-BBBB"
     accion_saludable.canjeable = true
     accion_saludable.recurrente = false
     accion_saludable.points = 10
+    fecha_inicio = node.css('span.dtstart').css('span.value-title').attr('title').value
+    fecha_fin = node.css('span.dtend').css('span.value-title').attr('title').value rescue nil
+    puts accion_saludable.name
+    fi = DateTime.parse(fecha_inicio)
+    accion_saludable.fecha_inicio = fi
+    accion_saludable.hora_inicio = fi
+    if fecha_fin
+      ff = DateTime.parse(fecha_fin)
+      accion_saludable.fecha_fin = ff
+      accion_saludable.hora_fin = ff
+    else
+      accion_saludable.fecha_fin = fi
+      accion_saludable.hora_fin = fi
+    end
     accion_saludable.promotor = "INDEPORTE"
+    puts accion_saludable
     accion_saludable.save!
     puts '########'
+
   end
 end
 
