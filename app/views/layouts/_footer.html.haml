@@ -1,28 +1,33 @@
 #footer-wrapper
   %footer#footer.container
     .row
-      .9u
-        %section.widget-links
-          %h2 Enlaces y recursos
-          %ul.style2
-            %li
-              %a{href: '#'} Secretaría de Salud
-      .3u
-        %section.widget-contact.last
-          %h2 Contacto:
-          %ul
-            %li
-              %a.fa.fa-twitter.solo{href: 'http://twitter.com/juancar1os'}
-                %span Twitter
-            %li
-              %a.fa.fa-facebook.solo{href: '#'}
-                %span Facebook
-            %li
-              %a.fa.fa-google-plus.solo{href: '#'}
-                %span Google+
-          %p Tlaxcoaque #8, Ciudad de México
+      .col-xs-6.col-sm-6.col-md-3.column
+        %h4
+          Información
+        %ul.nav
+          %li
+            =link_to "Acerca De", '#'
+          %li
+            %a{href: 'http://www.salud.df.gob.mx/'}
+              Secretaría de Salud
+      .col-xs-6.col-sm-6.col-md-3.column
+        %h4
+          Redes Sociales
+      .col-xs-6.col-sm-6.col-md-3.column
+        %h4
+          Código CDMX
+        %ul.nav
+          %li
+            %a{href:'http://eventario.mx'}
+              Eventario
+          %li
+            %a{href: 'http://traxi.mx'}
+              Traxi
+          %li
+            %a{href: 'http://verificalo.mx'}
+              Verifícalo
     .row
-      .12u
+      .col-md-12
         #copyright
-          Laboratorio para la Ciudad | Github: 
+          Código Ciudad de México| Github:
           %a{href: 'https://github.com/LabPLC/muevete_sedesa'} muevete_aqui
