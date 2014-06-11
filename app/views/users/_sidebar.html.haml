@@ -6,13 +6,36 @@
       %li.side-user.hidden-xs
         = gravatar_for @user
         %p.welcome
-          %i.fa.fa-key
-          Logged in:
+          %i.fa.fa-user
+          = @user.first_name
         %p.name.tooltip-sidebar-logout
           = @user.first_name
+        .circle-tile-number.text-faded.seguidores-box
+          .seguidores
+            %span.span-count
+              = current_user.followed_users.count
+              %span.span-count-text
+                seguidores
+          .siguiendo
+            %span.span-count
+              =current_user.followers.count
+              %span.span-count-text
+                siguiendo
+          %span#sparklineA
+          %br
+        .follow-form
+          - if user_signed_in?
+            - unless current_user == @user
+              -if !current_user.following?(@user)
+                = render 'follow'
+              - else
+                = render 'unfollow'
         %li
           %a{href: todo_user_acciones_path, class: "acciones_header"}
-            ACCIONES POR HACER:
+            %span
+              ACCIONES POR HACER DE
+              = @user.first_name.upcase
+
           - @user.todo_actions.each do |a|
             %li
               %a{href: accion_path(a.accion)}

@@ -15,19 +15,20 @@
             %span.span-count
               = current_user.followed_users.count
               %span.span-count-text
-                seguidores
+                siguiendo
           .siguiendo
             %span.span-count
               =current_user.followers.count
               %span.span-count-text
-                siguiendo
+                seguidores
           %span#sparklineA
         - if user_signed_in?
           - unless current_user == @user
-            -if !current_user.following?(@user)
-              = render 'follow'
-            - else
-              = render 'unfollow'
+            .follow-form
+              -if !current_user.following?(@user)
+                = render 'follow'
+              - else
+                = render 'unfollow'
         %li
           %a{href: done_user_acciones_path, class: 'puntos_header'}
             %i.fa.fa-star
@@ -38,7 +39,7 @@
         %li
           %a{href: todo_user_acciones_path, class: "acciones_header"}
             ACCIONES POR HACER:
-          - @user.todo_actions.each do |a|
+          - current_user.todo_actions.each do |a|
             %li
               %a{href: accion_path(a.accion)}
                 %i.fa.fa-flag-checkered
