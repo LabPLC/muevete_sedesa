@@ -1,4 +1,4 @@
-= render 'sidebar'
+= render 'shared/sidebar'
 
 #page-wrapper
   .page-content
@@ -7,4 +7,4 @@
         %h1 Acciones completadas
     .row
       - current_user.completed_actions.each do |relacion|
-        = render partial: "shared/action_show", locals: {accion: relacion.action, valor: 'blue'}
+        = render partial: "shared/action_show", locals: {accion: relacion.accion, valor: 'blue'}

@@ -507,7 +507,7 @@ a:focus {
 .navbar-side .side-user img {
     display: block;
     margin-bottom: 15px;
-    margin-left: 20px;
+    margin-left: 30%;
 }
 
 .navbar-side .side-user .welcome {
@@ -704,6 +704,8 @@ a:focus {
 span.breadcrumbs {
     color: #fff;
 }
+
+
 
 .page-title .date-picker {
     margin-top: -8px;
@@ -2093,4 +2095,44 @@ input[type="checkbox"]:checked::after,
         margin-bottom: -2px;
         margin-left: 0;
     }
+}
+
+.puntos_header {
+    color: #fff !important;
+    background-color: #35b6ef !important;
+}
+
+.acciones_header {
+    color: #000 !important;
+    background-color: #ecf0f1 !important;
+}
+
+.seguidores-box {
+    position:relative;
+    height: 40px;
+}
+
+.seguidores {
+    position: absolute;
+    width: 50%;
+    left: 0;
+}
+
+.siguiendo {
+    position: absolute;
+    width: 50%;
+    right: 0;
+}
+
+.span-count {
+    display: block;
+}
+
+.span-count-text {
+    font-size: 0.5em;
+    display: block;
+}
+
+.span-puntos {
+    font-size: 2em;
 }

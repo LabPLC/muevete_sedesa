@@ -6,23 +6,49 @@
       %li.side-user.hidden-xs
         = gravatar_for @user
         %p.welcome
-          %i.fa.fa-key
-          Logged in:
+          %i.fa.fa-user
+          = @user.first_name
         %p.name.tooltip-sidebar-logout
           = @user.first_name
-        %li.nav-search
-          %form{role: "form"}
-            %input{type:"search", class: "form-control", placeholder: "Buscar"}
-            %button.btn
-              %i.fa.fa-search
+        .circle-tile-number.text-faded.seguidores-box
+          .seguidores
+            %span.span-count
+              = current_user.followed_users.count
+              %span.span-count-text
+                seguidores
+          .siguiendo
+            %span.span-count
+              =current_user.followers.count
+              %span.span-count-text
+                siguiendo
+          %span#sparklineA
+        - if user_signed_in?
+          - unless current_user == @user
+            -if !current_user.following?(@user)
+              = render 'follow'
+            - else
+              = render 'unfollow'
         %li
-          %a{href: user_home_path}
-            %i.fa.fa-dashboard
-            Dashboard
+          %a{href: done_user_acciones_path, class: 'puntos_header'}
+            %i.fa.fa-star
+            %span
+              PUNTOS:
+              %span.span-puntos
+                =current_user.points
         %li
-          %a{href: acciones_path}
-            %i.fa.fa-calendar
-            Actividades
+          %a{href: todo_user_acciones_path, class: "acciones_header"}
+            ACCIONES POR HACER:
+          - @user.todo_actions.each do |a|
+            %li
+              %a{href: accion_path(a.accion)}
+                %i.fa.fa-flag-checkered
+                = a.accion.name
+                = "#{a.accion.fecha} - #{a.accion.horario}"
+        %li.divisor
+          %a{href: "#", class: "acciones_header"}
+        %li
+          %a{href: "#", class: "acciones_header"}
+            ¿DONDE ME PUEDO CHECAR?
         %li
           %a{href: "http://checate-aqui.herokuapp.com"}
             %i.fa.fa-hospital-o

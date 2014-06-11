@@ -10,19 +10,20 @@
           Logged in:
         %p.name.tooltip-sidebar-logout
           = @user.first_name
-        %li.nav-search
-          %form{role: "form"}
-            %input{type:"search", class: "form-control", placeholder: "Buscar"}
-            %button.btn
-              %i.fa.fa-search
         %li
-          %a{href: user_home_path}
-            %i.fa.fa-dashboard
-            Dashboard
+          %a{href: todo_user_acciones_path, class: "acciones_header"}
+            ACCIONES POR HACER:
+          - @user.todo_actions.each do |a|
+            %li
+              %a{href: accion_path(a.accion)}
+                %i.fa.fa-flag-checkered
+                = a.accion.name
+                = "#{a.accion.fecha} - #{a.accion.horario}"
+        %li.divisor
+          %a{href: "#", class: "acciones_header"}
         %li
-          %a{href: acciones_path}
-            %i.fa.fa-calendar
-            Actividades
+          %a{href: "#", class: "acciones_header"}
+            ¿DONDE ME PUEDO CHECAR?
         %li
           %a{href: "http://checate-aqui.herokuapp.com"}
             %i.fa.fa-hospital-o

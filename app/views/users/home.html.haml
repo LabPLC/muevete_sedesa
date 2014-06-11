@@ -1,6 +1,6 @@
 - provide(:title, "Perfil")
 
-= render 'sidebar'
+= render 'shared/sidebar'
 
 #page-wrapper
   .page-content
@@ -26,91 +26,7 @@
         .col-xs-push-6.col.sm-pull-3
           = render partial: "shared/action_show", locals: {accion: a}
 
-    .row
-      .col-lg-2.col-sm-6
-        .circle-tile
-          %a{href: todo_user_acciones_path}
-            .circle-tile-heading.green
-              %i.fa.fa-users.fa-fw.fa-3x
-          .circle-tile-content.green
-            .circle-tile-description.text-faded
-              Acciones por hacer
-            .circle-tile-number.text-faded
-              = current_user.todo_actions.count
-              %span#sparklineA
-            %a.circle-tile-footer{href: todo_user_acciones_path}
-              Más información
-              %i.fa.fa-chevron-circle-right
 
-      -# Total de puntos
-      .col-lg-2.col-sm-6
-        .circle-tile
-          %a{href: '#'}
-            .circle-tile-heading.blue
-              %i.fa.fa-star.fa-fw.fa-3x
-          .circle-tile-content.blue
-            .circle-tile-description.text-faded
-              Total de Puntos e Historial
-            .circle-tile-number.text-faded
-              = current_user.points
-              puntos
-              %span#sparklineA
-            %a.circle-tile-footer{href: '#'}
-              Historial
-              %i.fa.fa-chevron-circle-right
-
-      -# Acciones disponibles
-      .col-lg-2.col-sm-6
-        .circle-tile
-          %a{href: acciones_path}
-            .circle-tile-heading.red
-              %i.fa.fa-tasks.fa-fw.fa-3x
-          .circle-tile-content.red
-            .circle-tile-description.text-faded
-              Acciones Disponibles
-            .circle-tile-number.text-faded
-              = Accion.count
-              acciones
-              %span#sparklineA
-            %a.circle-tile-footer{href: acciones_path}
-              Ver todas las acciones
-              %i.fa.fa-chevron-circle-right
-
-      -# Acciones realizadas
-      .col-lg-2.col-sm-6
-        .circle-tile
-          %a{href: done_user_acciones_path}
-            .circle-tile-heading.purple
-              %i.fa.fa-check.fa-fw.fa-3x
-          .circle-tile-content.purple
-            .circle-tile-description.text-faded
-              Acciones realizadas
-            .circle-tile-number.text-faded
-              = current_user.completed_actions.count
-              acciones
-              %span#sparklineA
-            %a.circle-tile-footer{href: done_user_acciones_path}
-              Historial
-              %i.fa.fa-chevron-circle-right
-      .col-lg-2.col-sm-6
-        .circle-tile
-          %a{href: '#'}
-            .circle-tile-heading.orange
-              %i.fa.fa-users.fa-fw.fa-3x
-          .circle-tile-content.orange
-            .circle-tile-description.text-faded
-              Seguidores & Siguiendo
-            .circle-tile-number.text-faded
-              = current_user.followers.count
-              |
-              = current_user.followed_users.count
-              %span#sparklineA
-            - if user_signed_in?
-              - unless current_user == @user
-                -if !current_user.following?(@user)
-                  = render 'follow'
-                - else
-                  = render 'unfollow'
     .row
       .col-lg-6
         .portlet.portlet-default
