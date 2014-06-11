@@ -26,7 +26,30 @@
         .col-xs-push-6.col.sm-pull-3
           = render partial: "shared/action_show", locals: {accion: a}
 
-
+    .row
+      .col-lg-6
+        .portlet.portlet-default
+          .portlet-heading
+            .portlet-title
+              %h4
+                Acciones Completadas
+            .clearfix
+          .portlet-body
+            .table-responsive
+              %table.table
+                %thead
+                  %th
+                    Nombre
+                  %th
+                    puntos
+                %tbody
+                  -current_user.completed_actions.each do |a|
+                    %tr
+                      %td
+                        %a{href: accion_path(a.accion)}
+                          =a.accion.name
+                      %td
+                        =a.accion.points
     .row
       .col-lg-6
         .portlet.portlet-default

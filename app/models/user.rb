@@ -61,6 +61,11 @@ class User < ActiveRecord::Base
     relationships.where(completed: false)
   end
 
+  def available_actions
+    completed_ids = completed_actions.map(&:accion_id)
+    acciones = Accion.where.not(id: completed_ids)
+  end
+
   def complete_action!(accion)
     if !doing_action?(accion).nil?
       if accion.recurrente

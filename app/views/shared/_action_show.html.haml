@@ -2,8 +2,10 @@
   .portlet{class: "portlet-white"}
     .portlet-heading
       .portlet-title
+
         %h4
-          = accion.name
+          %a{href: accion_path(accion), class: "link_accion"}
+            = accion.name
       .portlet-widgets
         %span
           = accion.promotor
