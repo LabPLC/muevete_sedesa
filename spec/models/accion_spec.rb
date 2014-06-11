@@ -43,6 +43,10 @@ describe Accion do
     it { should respond_to(:code) }
 
     it { should respond_to(:url)}
+    it { should respond_to(:fecha_inicio)}
+    it { should respond_to(:fecha_fin)}
+    it  {should respond_to(:hora_inicio)}
+    it {should respond_to(:hora_fin)}
 
 
 

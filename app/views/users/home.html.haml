@@ -14,14 +14,18 @@
               Completa actividades, y revisa a tus amigos.
           %ol.breadcrumb
             %li.active
-              %i.fa.fa-dashboard
-              Dashboard
+              %span.breadcrumbs
+                ¡NUEVAS ACTIVIDADES!
             %li.pull-right
-              #reportrange.btn.btn-green.btn-square.date-picker
-                %i.fa.fa-calendar
-                %span.date-range
-
+              %a{href: acciones_path}
+                #reportrange.btn.btn-blue.btn-square.date-picker
+                  VER MÁS
     -# Acciones por hacer
+    .row
+      - @acciones.each do |a|
+        .col-xs-push-6.col.sm-pull-3
+          = render partial: "shared/action_show", locals: {accion: a}
+
     .row
       .col-lg-2.col-sm-6
         .circle-tile

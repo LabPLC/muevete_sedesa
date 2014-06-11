@@ -261,12 +261,14 @@ a:focus {
     height: 50px;
     padding-top: 15px;
     color: #fff;
+    background-color: #23a3ed;
+
 }
 
 .navbar-top>.nav-top>.nav>li>a:hover,
 .navbar-top>.nav-top>.nav>li>a:focus {
     color: #fff;
-    background-color: #142434;
+    background-color: #3276b1;
 }
 
 .navbar-top .dropdown-messages {
@@ -696,7 +698,11 @@ a:focus {
 
 .page-title .breadcrumb {
     margin-bottom: 0;
-    background-color: #e0e7e8;
+    background-color: #35b6ef ;
+}
+
+span.breadcrumbs {
+    color: #fff;
 }
 
 .page-title .date-picker {
@@ -740,11 +746,12 @@ a:focus {
 }
 
 .portlet {
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 .portlet .portlet-heading {
     padding: 0 15px;
+    background-color: #fff;
 }
 
 .portlet .portlet-heading h4 {
@@ -797,8 +804,9 @@ a:focus {
 }
 
 .portlet .portlet-footer {
-    padding: 10px 15px;
+    padding: 0px 15px;
     background: #e0e7e8;
+    background-color: #fff;
 }
 
 .portlet .portlet-footer ul {
@@ -891,6 +899,18 @@ a:focus {
 
 .puntos-container {
     margin-left: 60%;
+}
+
+.puntos-span {
+    font-size: 2em;
+}
+
+.parrafo-horario {
+    font-weight: 600;
+}
+
+.texto-puntos {
+    display:block;
 }
 
 /* Flex Tile Styles

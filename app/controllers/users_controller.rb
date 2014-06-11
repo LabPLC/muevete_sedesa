@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   def home
     # @acciones = Action.all
-    @acciones = Accion.all.sample(3)
+    @acciones = Accion.order('created_at DESC').limit(6)
   end
 
   def todo_actions

@@ -1,12 +1,12 @@
 .col-lg-4
-  .portlet{class: "portlet-#{valor}"}
+  .portlet{class: "portlet-white"}
     .portlet-heading
       .portlet-title
         %h4
           = accion.name
       .portlet-widgets
-        %a.btn.btn-xs.btn-purple{href: accion_path(accion)}
-          Ver más
+        %span
+          = accion.promotor
         %span.divider
         %a{href: "#accion-#{accion.id}", "data-parent" => '#accordion', 'data-toggle'=>'collapse'}
           %i.fa.fa-chevron-down
@@ -15,13 +15,18 @@
       .portlet-body
         %p
           = accion.desc
+        %p.parrafo-horario
+          = "#{accion.fecha} - #{accion.horario}"
       .portlet-footer
         .bottom-container
           .participa-container
-            %a.btn.btn-xs.btn-purple{href: accion_path(accion)}
+            %a.btn.btn-red{href: accion_path(accion)}
               Participa
           .puntos-container
-            =accion.points
-            puntos
+            %p.texto-puntos
+              %span.puntos-span
+                =accion.points
+              %span.puntos-text
+                puntos
 
 

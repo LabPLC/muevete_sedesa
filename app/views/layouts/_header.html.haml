@@ -11,15 +11,8 @@
         %a#sidebar-toggle{href: '#', "data-toggle" => 'tooltip', "data-placement"=>"right", "title"=>"encojer"}
           %i.fa.fa-bars
     %ul.nav.navbar-right
-      %li.active
-        - if user_signed_in?
-          %a{ href: user_home_path} Dashboard
-        - else
-          %a{ href: root_path} ¡Cuídate!
       %li
-        %a{ href: static_pages_ayuda_path} Ayuda
-      %li
-        %a{ href: static_pages_info_path} Información
+        %a{ href: static_pages_info_path} ¡Chécate!
       %li.dropdown
         - if user_signed_in?
           %a.dropdown-toggle{ href: user_home_path, "data-toggle" => "dropdown"}
