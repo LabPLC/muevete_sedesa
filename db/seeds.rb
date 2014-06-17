@@ -22,7 +22,7 @@ end
   #password_confirmation: "juancar1os"
 #})
 
-10.times do |n|
+3.times do |n|
   password = "password111"
   User.create({
     first_name: Faker::Name.first_name,
@@ -35,13 +35,9 @@ end
 
 # CREATE ACTIONS
 
-Accion.create(name: "Accion Saludable 1", desc: "Esta es una accion saludable que puedes checar blablablab", points: 20, level: 1)
 
-Accion.create(name: "Campaña de vacunación 1", desc: "Qué bueno que estas consciente de tu salud. Invierno es una época del año en donde la población se encuentra más propensa a enfermedades. Estamos seguros que con ésta vacuna, estarás más lejos de estar enfermo :)", points: 20, level: 1, canjeable: true, code: "AAAA-12345")
 
-Accion.create(name: "Campaña de vacunación 2", desc: "Con la Influenza AH1N1 no se juega. Qué bueno que estas consciente de tu salud. Invierno es una época del año en donde la población se encuentra más propensa a enfermedades. Estamos seguros que con ésta vacuna, estarás más lejos de estar enfermo :)", points: 20, level: 1, code: "AAAA-12345")
-
-Accion.create(name: "Cuídate por tu salud", desc: "Fomenta la práctica de la actividad física y contribuye al tratamiento dietetico como usuario de los servicios de salud", points: 10, level: 1)
+Accion.create(name: "Cuídate", desc: "Fomenta la práctica de la actividad física y contribuye al tratamiento dietetico como usuario de los servicios de salud", points: 10, level: 1)
 
 Accion.create(name: "¿Para qué moverme?", desc: "Te permite desestresarte y darte un tiempo para mejorar la circulación sanguinea.", points: 10, level: 1)
 
@@ -153,15 +149,15 @@ get_urls(eventos,dates)
 
 User.first.tap do |user|
 
-  Accion.all.sample(3).each do |action|
-    user.do_action!(action)
-  end
+  #Accion.all.sample(3).each do |action|
+    #user.do_action!(action)
+  #end
 
-  User.all.limit(48).offset(2).tap do |following|
+  User.all.offset(2).tap do |following|
     following.each {|u| user.follow!(u) }
   end
 
-  User.all.limit(37).offset(3).tap do |followers|
+  User.all.offset(3).tap do |followers|
     followers.each {|u| u.follow!(user) }
   end
 
