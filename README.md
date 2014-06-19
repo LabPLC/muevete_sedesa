@@ -34,13 +34,11 @@ rails server
 
 ¡Cuídate! es una plataforma que busca transformar el cuidar tu salud en un juego. Mediante integración con redes sociales, "Cuídate" te permite conocer los eventos de salud de distintas organizaciones de la Ciudad de México enfocadas en disminuir la obesidad y sobrepeso de la gente.
 
-![Imgur](http://i.imgur.com/IDSopRW.png)
+![Imgur](http://i.imgur.com/pflsmy8.png)
 
-![Imgur](http://i.imgur.com/0sI3esC.png)
+![Imgur](http://i.imgur.com/VtujyYh.png)
 
-![Imgur](http://i.imgur.com/GDHCJXK.png)
-
-![Imgur](http://i.imgur.com/jIrPwkr.png)
+![Imgur](http://i.imgur.com/UcZ33uw.png)
 
 ## Contribuye
 
