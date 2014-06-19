@@ -37,7 +37,7 @@ a:focus {
 
 @media(min-width:768px) {
     body {
-        background: #34495e;
+        background: #ECF0F1;
     }
 }
 
@@ -549,7 +549,7 @@ a:focus {
     margin-bottom: 0;
     border-bottom: 1px solid #54677a;
     font-size: 13px;
-    background-color: #34495e;
+    background-color: #34495e !important;
 }
 
 .navbar-side .navbar-nav>li>a,
@@ -798,7 +798,7 @@ span.breadcrumbs {
 
 .portlet-orange>.portlet-heading {
     color: #fff;
-    background-color: #f39c12;
+    background-color: #54677a;
 }
 
 .portlet-blue,
@@ -1080,9 +1080,9 @@ fieldset[disabled] .btn-green.active {
 }
 
 .btn-orange {
-    border-color: #e79411;
+    border-color: #23a3ed;
     color: #fff;
-    background-color: #f39c12;
+    background-color: #23a3ed;
 }
 
 .btn-orange:hover,
@@ -1090,9 +1090,9 @@ fieldset[disabled] .btn-green.active {
 .btn-orange:active,
 .btn-orange.active,
 .open .dropdown-toggle.btn-orange {
-    border-color: #cf850f;
+    border-color: #2980b9;
     color: #fff;
-    background-color: #da8c10;
+    background-color: #2980b9;
 }
 
 .btn-orange.disabled,
@@ -1521,7 +1521,7 @@ a.google-plus-link:hover {
 
 .login-banner {
     margin: 50px 0;
-    color: #fff;
+    color: #000;
 }
 
 .portlet .login-heading {
@@ -2054,3 +2054,5 @@ input[type="checkbox"]:checked::after,
 .link_accion {
     color: #000 !important;
 }
+
+

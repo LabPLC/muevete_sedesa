@@ -19,6 +19,8 @@ $grayMediumLight: #eaeaea;
 /* move special fonts to HTML head for better performance */
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600');
 
+
+
 html,
 body {
   height: 100%;
@@ -81,7 +83,7 @@ img.grayscale {
 
 .navbar-bold {
   background-color:#23A3ED;
-  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 .navbar-bold li a:hover, .navbar-bold li.active {
@@ -101,7 +103,7 @@ img.grayscale {
   color:#fff;
   margin-left:-5px;
   margin-bottom:5px;
-  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 .header .lead {
@@ -181,4 +183,12 @@ img.grayscale {
 
 footer {
   padding: 100px 0;
+}
+
+.black_color {
+    color: #000;
+}
+
+.movido {
+  margin-top: 1em;
 }
