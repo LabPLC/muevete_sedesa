@@ -5,7 +5,7 @@ class AccionesController < ApplicationController
   end
 
   def index
-    @acciones = Accion.all.sample(Accion.all.size)
+    @acciones = Accion.from_today(Time.now, 1.year.from_now)
   end
 
   def agregar

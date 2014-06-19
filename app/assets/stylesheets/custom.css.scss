@@ -192,3 +192,14 @@ footer {
 .movido {
   margin-top: 1em;
 }
+
+@media(max-width: 480px) {
+  .header h1 {
+    font-size: 50pt !important;
+    margin-top: 10%;
+  }
+
+  .header .btn-lg {
+    font-size: 20px;
+  }
+}

@@ -43,7 +43,7 @@ Accion.create(name: "¿Para qué moverme?", desc: "Te permite desestresarte y da
 
 Accion.create(name: "Participaste en el Cicloton", desc: "Bien por andar en bicicleta y cuidar más tu cuerpo.", points: 30, level: 1, canjeable: true, code: "AAAA-12345")
 
-Accion.create(name: "Introduce tu'código de Ecobici", desc: "Ganarás 30 puntos por introducir tu tarjeta de Ecobici.", points: 30, level: 1, canjeable: true, code: 'AAAA-12345')
+Accion.create(name: "Introduce tu'código de Ecobici", desc: "Ganarás 30 puntos por introducir tu tarjeta de Ecobici.", points: 30, level: 1, canjeable: true, code: 'AAAA-12345', fecha_inicio: Time.now)
 
 
 Accion.create(name: "Taller de Lindy Hop (Swing)", desc: "Para que te muevas!", points: 10, level: 1, canjeable: true, code: "AAAA-12345", promotor: "INJUVE", fecha: "Lunes y Miercoles", horario: "16:00 a 18:00", lugar: "Sub Deportivo, Calzada de Tlalpan esq. Circuito Interior, Rio Churubusco", recurrente: true, url: "http://talleresinjuvedf.tumblr.com/post/76026393609/lindy-hop-sub-deportivo-lunes-y-miercoles")

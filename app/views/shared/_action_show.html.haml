@@ -22,8 +22,13 @@
       .portlet-footer
         .bottom-container
           .participa-container
-            %a.btn.btn-red{href: accion_path(accion)}
-              Participa
+            - if user_signed_in?
+              %a.btn.btn-red{href: accion_path(accion)}
+                Participa
+            - else
+              %a.btn.btn-red{href: new_user_session_path}
+                Registrate para participar
+
           .puntos-container
             %p.texto-puntos
               %span.puntos-span
