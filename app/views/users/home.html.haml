@@ -71,7 +71,7 @@
                     Puntos
                 %tbody
                   - i = 1
-                  - current_user.followed_users.first(4).each do |u|
+                  - current_user.followed_users.order(points: :desc).first(4).each do |u|
                     %tr
                       %td
                         = i
