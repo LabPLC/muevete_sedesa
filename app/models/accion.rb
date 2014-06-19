@@ -28,7 +28,7 @@ class Accion< ActiveRecord::Base
   validates :code, :presence => true,
                    :if       => :codigo_valido?
 
-  scope :from_today, lambda {|start_date, end_date| where('fecha_inicio >= ? AND fecha_inicio <= ? OR recurrente == ?', start_date, end_date, "TRUE")}
+  scope :from_today, lambda {|start_date, end_date| where('fecha_inicio >= ? AND fecha_inicio <= ? OR recurrente = ?', start_date, end_date, true)}
 
   #before_ :check_code
 
